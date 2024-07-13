@@ -1,3 +1,6 @@
+import 'package:belives_store/screens/pages/home%20page/home_page.dart';
+import 'package:belives_store/screens/pages/home%20page/scan_page.dart';
+import 'package:belives_store/screens/pages/home%20page/search_page.dart';
 import 'package:belives_store/screens/pages/onboarding_page.dart';
 import 'package:belives_store/view/auth/register_page/otp_authentication.dart';
 import 'package:belives_store/view/auth/register_page/sign_up_page.dart';
@@ -16,7 +19,8 @@ class BelivesStore extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OtpAuthentication(),
+      home: SearchPage(
+      ),
     );
   }
 }

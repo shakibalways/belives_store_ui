@@ -18,7 +18,9 @@ class OtpAuthentication extends StatelessWidget {
                 RTexts.otpText,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Text(RTexts.otpSub),
             ],
           ),
