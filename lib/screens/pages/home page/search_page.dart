@@ -1,4 +1,9 @@
+import 'package:belives_store/global_wieght/conatiner_custom.dart';
+import 'package:belives_store/global_wieght/custom_divider.dart';
+import 'package:belives_store/utilits/constant/image_list.dart';
 import 'package:flutter/material.dart';
+
+import '../../../utilits/constant/text_list.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -20,64 +25,58 @@ class _SearchPageState extends State<SearchPage> {
               child: TextField(
                 decoration: InputDecoration(
                     filled: true,
-                    hoverColor: Color(0xffF3F6F8),
+                    hoverColor: const Color(0xfff2f2f2),
                     hintText: "Search On Belives-Store",
-                    suffixIcon: Icon(Icons.search),
+                    suffixIcon: const Icon(Icons.search),
                     border: OutlineInputBorder(
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(10),
                     )),
               ),
             ),
-            Divider(
-              height: 10,
+            CustomDivider(
               indent: 20,
               endIndent: 20,
-              color: Colors.grey[300],
-              thickness: 1,
             ),
-            Text("RECENT SEARCHES",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.grey),),
+            const Text(
+              "RECENT SEARCHES",
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey),
+            ),
             Column(
               children: [
-                ListTile(
+                const ListTile(
                   leading: Icon(Icons.access_alarms_outlined),
                   title: Text("Beosound 1"),
                   trailing: Icon(Icons.close),
                 ),
-                Divider(
-                  height: 30,
+                CustomDivider(
                   indent: 20,
                   endIndent: 20,
-                  color: Colors.grey[300],
-                  thickness: 1,
                 ),
-                ListTile(
+                const ListTile(
                   leading: Icon(Icons.access_alarms_outlined),
                   title: Text("Beosound Balance"),
                   trailing: Icon(Icons.close),
                 ),
-                Divider(
-                  height: 30,
+                CustomDivider(
                   indent: 20,
                   endIndent: 20,
-                  color: Colors.grey[300],
-                  thickness: 1,
                 ),
-                ListTile(
+                const ListTile(
                   leading: Icon(Icons.access_alarms_outlined),
                   title: Text("Beolit 17"),
                   trailing: Icon(Icons.close),
                 ),
-                Divider(
-                  height: 30,
+                CustomDivider(
                   indent: 20,
                   endIndent: 20,
-                  color: Colors.grey[300],
-                  thickness: 1,
                 ),
               ],
             ),
-            Column(
+            const Column(
               children: [
                 Text(
                   "POPULAR SEARCHES",
@@ -92,71 +91,14 @@ class _SearchPageState extends State<SearchPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      height: 250,
-                      width: 170,
-                      decoration: BoxDecoration(
-                          color: Color(0xfff2f2f2),
-                          borderRadius: BorderRadius.circular(40),
-                          boxShadow: [
-                            BoxShadow(
-                              offset: Offset(5, 9),
-                              blurRadius: 5,
-                              spreadRadius: 2,
-                              color: Colors.grey.withOpacity(0.2),
-                            )
-                          ]),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "assets/home_image/beosound.png",
-                            height: 150,
-                            fit: BoxFit.fitHeight,
-                          ),
-                          Text(
-                            "Beosound 1",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                          Text(
-                            "\$1,600",
-                            style: TextStyle(fontWeight: FontWeight.w400),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: 250,
-                      width: 170,
-                      decoration: BoxDecoration(
-                          color: Color(0xfff2f2f2),
-                          borderRadius: BorderRadius.circular(40),
-                          boxShadow: [
-                            BoxShadow(
-                              offset: Offset(5, 9),
-                              blurRadius: 5,
-                              spreadRadius: 2,
-                              color: Colors.grey.withOpacity(0.2),
-                            )
-                          ]),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "assets/home_image/biolit.png",
-                            height: 150,
-                            fit: BoxFit.fitHeight,
-                          ),
-                          Text(
-                            "Beosound 1",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                          Text(
-                            "\$1,600",
-                            style: TextStyle(fontWeight: FontWeight.w400),
-                          ),
-                        ],
-                      ),
+                    ContainerCustom(
+                        image: RImages.beosound,
+                        itemName: RTexts.name,
+                        itemPrice: RTexts.amount),
+                    ContainerCustom(
+                      image: RImages.biolit,
+                      itemName: RTexts.name1,
+                      itemPrice: RTexts.amount1,
                     )
                   ],
                 )
