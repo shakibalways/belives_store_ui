@@ -30,4 +30,9 @@ static const String name="Beosound 1";
 static const String amount="\$1,600";
 static const String name1="Beolit 17";
 static const String amount1="\$500";
+//Place Order product name list
+static const String b="Beosound 1";
+static const String c="Beosound Ba…";
+static const String d="Beoplay H…";
+static const String e="Beoplay A9";
 }

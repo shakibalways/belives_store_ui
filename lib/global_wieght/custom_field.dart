@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomField extends StatelessWidget {
-  final String hintText;
+  final String? hintText;
   final Widget prefixIcon;
   final String labelText;
   final Widget? suffixIcon;
   final TextEditingController controller;
   const CustomField(
       {super.key,
-      required this.hintText,
+       this.hintText,
       required this.prefixIcon,
       required this.labelText,
       this.suffixIcon, required this.controller});

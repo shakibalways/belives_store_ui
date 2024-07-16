@@ -1,8 +1,9 @@
-import 'package:belives_store/utilits/constant/image_list.dart';
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
+
+import '../../../utilits/constant/image_list.dart';
 
 class ScanPage extends StatelessWidget {
   const ScanPage({super.key});

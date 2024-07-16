@@ -1,10 +1,12 @@
-import 'package:belives_store/data%20model/productof_list.dart';
-import 'package:belives_store/global_wieght/custom_container.dart';
-import 'package:belives_store/global_wieght/custom_divider.dart';
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+
+import '../../../data model/productof_list.dart';
+import '../../../global_wieght/custom_container.dart';
+import '../../../global_wieght/custom_divider.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -300,7 +302,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       color: Colors.black,
                                       fontSize: 18),
                                 ),
-                                Text("Edit your informatio")
+                                Text("Edit your information")
                               ],
                             ),
                           ],

@@ -67,6 +67,7 @@ flutter:
     - assets/images/
     - assets/home_image/
     - assets/scan_page/
+    - assets/pay_page_im/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

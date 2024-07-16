@@ -1,8 +1,11 @@
-import 'package:belives_store/global_wieght/conatiner_custom.dart';
-import 'package:belives_store/global_wieght/custom_divider.dart';
-import 'package:belives_store/utilits/constant/image_list.dart';
+
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../global_wieght/conatiner_custom.dart';
+import '../../../global_wieght/custom_divider.dart';
+import '../../../utilits/constant/image_list.dart';
 import '../../../utilits/constant/text_list.dart';
 
 class SearchPage extends StatefulWidget {

@@ -1,8 +1,13 @@
 
 
-import 'package:belives_store/screens/pages/home%20page/catagories_page.dart';
-import 'package:belives_store/screens/pages/home%20page/search_result.dart';
-import 'package:belives_store/screens/pages/onboarding_page.dart';
+import 'package:belives_store/screens/pages/catagories/catagories_page.dart';
+import 'package:belives_store/screens/pages/order_page/order_complete.dart';
+import 'package:belives_store/screens/pages/order_page/order_failed.dart';
+import 'package:belives_store/screens/pages/order_page/order_review.dart';
+import 'package:belives_store/screens/pages/payment_method/add_new_card.dart';
+import 'package:belives_store/screens/pages/payment_method/payment_method.dart';
+import 'package:belives_store/screens/pages/search_item/search_result.dart';
+import 'package:belives_store/screens/pages/onboarding/onboarding_page.dart';
 import 'package:belives_store/screens/pages/splash_screen/splash_screen.dart';
 import 'package:belives_store/screens/pages/user/profile.dart';
 import 'package:belives_store/view/auth/register_page/sign_up_page.dart';
@@ -21,7 +26,7 @@ class BelivesStore extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfilePage(
+      home: OrderFailed(
       ),
     );
   }

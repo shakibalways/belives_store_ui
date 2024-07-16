@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../screens/pages/home page/search_result.dart';
+import '../../../screens/pages/search_item/search_result.dart';
 
 class SignInPage extends StatefulWidget {
 
@@ -69,7 +69,7 @@ class _SignInPageState extends State<SignInPage> {
                  InkWell(
                    onTap:() async {
                      SharedPreferences prefs = await SharedPreferences.getInstance();
-                     
+
                     if(nameController.text.isNotEmpty && passController.text.isNotEmpty){
                   await prefs.setString('name', nameController.text.toString());
                   await prefs.setString('pass', passController.text.toString());

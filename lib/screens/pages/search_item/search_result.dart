@@ -1,7 +1,10 @@
-import 'package:belives_store/global_wieght/conatiner_custom.dart';
-import 'package:belives_store/global_wieght/custom_divider.dart';
 
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../../../global_wieght/conatiner_custom.dart';
+import '../../../global_wieght/custom_divider.dart';
 
 class SearchResult extends StatefulWidget {
   const SearchResult({super.key});

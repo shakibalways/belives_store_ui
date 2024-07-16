@@ -1,6 +1,6 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CatagoriesPage extends StatelessWidget {
   const CatagoriesPage({super.key});
@@ -11,14 +11,14 @@ class CatagoriesPage extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.arrow_back),
+          leading: const Icon(Icons.arrow_back),
           centerTitle: true,
-          title: Text(
+          title: const Text(
             "SPEAKERS",
             style: TextStyle(fontSize: 17),
           ),
           actions: [
-            Icon(
+            const Icon(
               Icons.import_export,
               size: 30,
             )
@@ -33,7 +33,7 @@ class CatagoriesPage extends StatelessWidget {
                 width: 365,
                 decoration: BoxDecoration(
                     color: const Color(0xfff2f2f2),
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(150),
                       topRight: Radius.circular(20),
                       bottomLeft: Radius.circular(20),
@@ -52,7 +52,7 @@ class CatagoriesPage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         "Beosound Balance",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 25),
@@ -61,7 +61,7 @@ class CatagoriesPage extends StatelessWidget {
                         "Innovative, wireless home speaker",
                         style: TextStyle(color: Colors.grey[500]),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
@@ -69,7 +69,7 @@ class CatagoriesPage extends StatelessWidget {
                         children: [
                           for (int i = 0; i < 3; i++)
                             Container(
-                              margin: EdgeInsets.all(5),
+                              margin: const EdgeInsets.all(5),
                               height: 5,
                               width: 20,
                               decoration: BoxDecoration(
@@ -91,9 +91,9 @@ class CatagoriesPage extends StatelessWidget {
                     fit: BoxFit.fitHeight,
                   )),
             ]),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
 
-            TabBar(
+            const TabBar(
                 isScrollable: true,
                 indicatorColor: Colors.blue,
                 unselectedLabelColor: Colors.grey,

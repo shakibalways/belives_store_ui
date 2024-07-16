@@ -1,3 +1,6 @@
+
+
+
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -9,15 +12,15 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
-  int currentIndex =0;
-  List pages =[
-
+  int currentIndex = 0;
+  List pages = [
   ];
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0),
         child: GNav(
             gap: 8,
             padding: EdgeInsets.all(15),
@@ -43,4 +46,4 @@ class _BottomNavState extends State<BottomNav> {
       ),
     );
   }
-
+}

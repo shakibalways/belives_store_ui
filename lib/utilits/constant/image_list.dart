@@ -12,5 +12,6 @@ static const String scanImage="assets/scan_page/Scan.png";
 static const String containerImage="assets/scan_page/Rectangle (1).png";
 static const String box="assets/scan_page/box.png";
 static const String heads="assets/home_image/🖼 Image.png";
+static const String be="assets/home_image/be.png";
 
 }
