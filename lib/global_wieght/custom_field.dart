@@ -6,18 +6,20 @@ class CustomField extends StatelessWidget {
   final Widget prefixIcon;
   final String labelText;
   final Widget? suffixIcon;
+  final TextEditingController controller;
   const CustomField(
       {super.key,
       required this.hintText,
       required this.prefixIcon,
       required this.labelText,
-      this.suffixIcon});
+      this.suffixIcon, required this.controller});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 400,
+
       child: TextField(
+        controller:controller ,
 
         decoration: InputDecoration(
 

@@ -12,31 +12,32 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  TextEditingController gmailController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController passController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(top: 40),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // Form List
-            const Column(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(right: 20,left: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              // Form List
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   RTexts.getting,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
                 Text(
                   RTexts.sub,
                   style: TextStyle(color: Colors.black87),
                 ),
-                SizedBox(
-                  height: 3,
-                ),
                 CustomField(
+                    controller: gmailController,
                     hintText: 'shakibmohammad18@gmail.com',
                     prefixIcon: Icon(Icons.mail),
                     labelText: 'Email'),
@@ -44,6 +45,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   height: 30,
                 ),
                 CustomField(
+                    controller: nameController,
                     hintText: 'abdullah al shakib',
                     prefixIcon: Icon(Icons.person_outlined),
                     suffixIcon: Icon(
@@ -55,42 +57,55 @@ class _SignUpPageState extends State<SignUpPage> {
                   height: 30,
                 ),
                 CustomField(
+                    controller: passController,
                     hintText: '*********',
                     prefixIcon: Icon(Icons.lock_person),
                     suffixIcon: Icon(Icons.remove_red_eye),
                     labelText: 'Password'),
               ],
             ),
+              SizedBox(height: 10,),
 
-            // Button List
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+
+              // Button List
+              Column(
+
                 children: [
                   const CustomContainer(
                       title: 'SIGN UP', icon: Icons.arrow_circle_right_sharp),
                   const SizedBox(
-                    height: 20,
+                    height: 15,
                   ),
-                  RichText(
-                      text: const TextSpan(
-                          style: TextStyle(color: Colors.black),
-                          children: [
-                        TextSpan(text: "Don't have an account?"),
-                        TextSpan(
-                            text: " Sign up",
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Don't have an account?",
+                        style: TextStyle(
+                          color: Colors.grey[500],
+                        ),
+                      ),
+                      GestureDetector(
+                          onTap: () {
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => SearchResult()));
+                          },
+                          child: Text(
+                            'Sign In',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                                color: Colors.black)),
-                      ])),
+                                color: Colors.black,
+                                fontSize: 18),
+                          )),
+                    ],
+                  ),
                   const SizedBox(
-                    height: 80,
+                    height: 60,
                   ),
                   Container(
                     height: 50,
-                    width: 400,
                     decoration: BoxDecoration(
                         color: const Color(0xff3C79E6),
                         borderRadius: BorderRadius.circular(10)),
@@ -101,15 +116,16 @@ class _SignUpPageState extends State<SignUpPage> {
                         const Text(
                           "Connect with Facebook",
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
                   )
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

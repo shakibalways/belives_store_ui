@@ -2,7 +2,9 @@ import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/utilits/constant/color_list.dart';
 import 'package:belives_store/utilits/constant/image_list.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
+import 'package:belives_store/view/auth/sign_in_page/sign_in_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
@@ -17,7 +19,9 @@ class OnboardingPage extends StatelessWidget {
             Image.asset(
               RImages.onboardingImage,
             ),
-            const SizedBox(height: 50,),
+            const SizedBox(
+              height: 50,
+            ),
             //Content && Subcontent
             const Text(
               RTexts.content,
@@ -31,10 +35,18 @@ class OnboardingPage extends StatelessWidget {
                 style: TextStyle(fontSize: 16),
               ),
             ),
-            const SizedBox(height: 50,),
+            const SizedBox(
+              height: 50,
+            ),
             //CustomButton
-            const CustomContainer(
-                title: RTexts.buttonText, icon: Icons.arrow_forward_rounded)
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInPage()));
+                
+              },
+              child: const CustomContainer(
+                  title: RTexts.buttonText, icon: Icons.arrow_forward_rounded),
+            )
           ],
         ),
       ),

@@ -6,16 +6,18 @@ class ContainerCustom extends StatelessWidget {
   final String itemName;
   final String itemPrice;
 
-  const ContainerCustom({super.key, required this.image, required this.itemName, required this.itemPrice});
+  const ContainerCustom(
+      {super.key,
+      required this.image,
+      required this.itemName,
+      required this.itemPrice});
 
   @override
   Widget build(BuildContext context) {
-    return   Container(
-      height: 250,
-      width: 170,
+    return Container(
       decoration: BoxDecoration(
           color: const Color(0xfff2f2f2),
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(50),
           boxShadow: [
             BoxShadow(
               offset: const Offset(5, 9),
@@ -26,17 +28,22 @@ class ContainerCustom extends StatelessWidget {
           ]),
       child: Column(
         children: [
+          SizedBox(
+            height: 10,
+          ),
           Image.asset(
             image,
-            height: 150,
+            height: 170,
             fit: BoxFit.fitHeight,
           ),
-           Text(
-            itemName,
-            style: const TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 18),
+          SizedBox(
+            height: 30,
           ),
-           Text(
+          Text(
+            itemName,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+          ),
+          Text(
             itemPrice,
             style: const TextStyle(fontWeight: FontWeight.w400),
           ),
@@ -45,4 +52,3 @@ class ContainerCustom extends StatelessWidget {
     );
   }
 }
-

@@ -1,8 +1,6 @@
 import 'package:belives_store/global_wieght/conatiner_custom.dart';
 import 'package:belives_store/global_wieght/custom_divider.dart';
-import 'package:belives_store/utilits/constant/image_list.dart';
-import 'package:belives_store/utilits/constant/text_list.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 class SearchResult extends StatefulWidget {
@@ -110,6 +108,7 @@ class _SearchResultState extends State<SearchResult> {
                             onTap: (){
                               setState(() {
                                 searchController.clear();
+                                myList = productItem;
                               });
 
                             },
@@ -128,22 +127,25 @@ class _SearchResultState extends State<SearchResult> {
                   height: 20,
                 ),
                 Text(
-                  "FOUND 50 RESULTS ",
+                  "FOUND ${myList.length} RESULTS  ",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                       color: Colors.grey[500]),
                 ),
                 const SizedBox(
-                  height: 80,
+                  height: 60,
                 ),
                 myList.isNotEmpty
                     ? GridView.builder(
+
                         padding: const EdgeInsets.all(10),
                         shrinkWrap: true,
                         itemCount: myList.length,
                         physics: const NeverScrollableScrollPhysics(),
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          childAspectRatio: 0.7,
+
                             crossAxisCount: 2,
                             mainAxisSpacing: 20,
                             crossAxisSpacing: 20),
