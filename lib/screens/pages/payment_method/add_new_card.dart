@@ -1,15 +1,19 @@
-import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:flutter/material.dart';
 
 import '../../../global_wieght/custom_field.dart';
 
-class AddNewCard extends StatelessWidget {
+class AddNewCard extends StatefulWidget {
+  const AddNewCard({super.key});
+
+  @override
+  State<AddNewCard> createState() => _AddNewCardState();
+}
+
+class _AddNewCardState extends State<AddNewCard> {
   TextEditingController userController = TextEditingController();
   TextEditingController idController = TextEditingController();
   TextEditingController dateController = TextEditingController();
   TextEditingController cvvController = TextEditingController();
-
-  AddNewCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,17 +27,16 @@ class AddNewCard extends StatelessWidget {
           style: TextStyle(fontSize: 16),
         ),
         centerTitle: true,
-        actions: [const Icon(Icons.camera_alt_outlined)],
+        actions: const [Icon(Icons.camera_alt_outlined)],
       ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(30),
           child: Column(
-
             children: [
               Container(
                 height: height * .25,
-                width: width ,
+                width: width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   color: const Color(0xff0002FC),
@@ -142,7 +145,10 @@ class AddNewCard extends StatelessWidget {
                         labelText: 'Cvv'),
                   ),
                 ],
-              ),   const SizedBox(height: 30,),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
               const Row(
                 children: [
                   Icon(
@@ -155,7 +161,9 @@ class AddNewCard extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 100,),
+              const SizedBox(
+                height: 100,
+              ),
               Container(
                 height: height * .07,
                 width: width,
