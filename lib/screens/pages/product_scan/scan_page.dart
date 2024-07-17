@@ -33,7 +33,7 @@ class ScanPage extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10)),
-                    child: Icon(
+                    child: const Icon(
                       Icons.close,
                       size: 32,
                     ),
@@ -64,10 +64,10 @@ class ScanPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [Image.asset(RImages.box)],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

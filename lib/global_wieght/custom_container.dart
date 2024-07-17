@@ -28,7 +28,7 @@ class CustomContainer extends StatelessWidget {
           ),
           Icon(
             icon,
-            color: Colors.white,
+            color: Colors.white,size: 35,
           ),
         ],
       ),

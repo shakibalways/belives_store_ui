@@ -43,7 +43,7 @@ class _SearchResultState extends State<SearchResult> {
     },
     {
       "image": "assets/home_image/table.png",
-      "itemName": "mamon",
+      "itemName": "mamon vai",
       "itemPrice": "1000"
     },
     {

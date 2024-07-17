@@ -42,21 +42,21 @@ mainAxisAlignment: MainAxisAlignment.spaceAround,
                    ),
                  ),
                ),
-               SizedBox(height: 10,),
-               Text(
+               const SizedBox(height: 10,),
+               const Text(
                  "Payment Successful!",
                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                ),
-               SizedBox(height: 10,),
-               Text(
+               const SizedBox(height: 10,),
+               const Text(
                  "Orders will arrive in 3 days!",
                  style: TextStyle(color: Colors.grey),
                ),
              ],
            ),
-            SizedBox(height: 10,),
-            CustomDivider(),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
+            const CustomDivider(),
+            const SizedBox(height: 10,),
             SizedBox(
               height: 170,
               child: ListView.builder(
@@ -82,17 +82,17 @@ mainAxisAlignment: MainAxisAlignment.spaceAround,
                     );
                   }),
             ),
-            SizedBox(height: 25,),
+            const SizedBox(height: 25,),
             Container(
               height: height * .07,
               width: width,
               decoration: BoxDecoration(
-                  color: Color(0xffC6AB59),
+                  color: const Color(0xffC6AB59),
                   borderRadius: BorderRadius.circular(10)),
-              child: Center(
+              child: const Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: const [
+                  children: [
                     SizedBox(),
                     Text(
                       "PLACE ORDER ",

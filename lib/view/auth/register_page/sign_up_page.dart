@@ -20,7 +20,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(right: 20,left: 20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -69,7 +69,6 @@ class _SignUpPageState extends State<SignUpPage> {
 
               // Button List
               Column(
-
                 children: [
                   const CustomContainer(
                       title: 'SIGN UP', icon: Icons.arrow_circle_right_sharp),

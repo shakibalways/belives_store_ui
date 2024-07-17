@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 3),
             ()=>Navigator.pushReplacement(context,
             MaterialPageRoute(builder:
-                (context) =>OnboardingPage(),
+                (context) =>const OnboardingPage(),
 
             )
         )
@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
 
           // Tranform Text
-          GradientAnimationText(
+          const GradientAnimationText(
             text: Text(
               'Belives Store',
               style: TextStyle(

@@ -25,45 +25,45 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          // Form List
-           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                RTexts.title,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                RTexts.subTitle,
-                style: TextStyle(color: Colors.black87),
-              ),
-              SizedBox(
-                height: 80,
-              ),
-              CustomField(
-                controller: nameController ,
-                  hintText: 'UserName',
-                  prefixIcon: Icon(Icons.person_outlined),
-                  labelText: 'UserName or Email'),
-              SizedBox(
-                height: 30,
-              ),
-              CustomField(
-                controller: passController,
-                  hintText: '*********',
-                  prefixIcon: Icon(Icons.lock_person),
-                  suffixIcon: Icon(Icons.remove_red_eye),
-                  labelText: 'Password'),
-            ],
-          ),
-          // Button List
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Column(
+      body: Padding(
+        padding: const EdgeInsets.all(30),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // Form List
+             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  RTexts.title,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  RTexts.subTitle,
+                  style: TextStyle(color: Colors.black87),
+                ),
+                SizedBox(
+                  height: 80,
+                ),
+                CustomField(
+                  controller: nameController ,
+                    hintText: 'UserName',
+                    prefixIcon: Icon(Icons.person_outlined),
+                    labelText: 'UserName or Email'),
+                SizedBox(
+                  height: 30,
+                ),
+                CustomField(
+                  controller: passController,
+                    hintText: '*********',
+                    prefixIcon: Icon(Icons.lock_person),
+                    suffixIcon: Icon(Icons.remove_red_eye),
+                    labelText: 'Password'),
+              ],
+            ),
+            // Button List
+            Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                  InkWell(
@@ -122,7 +122,7 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 Container(
                   height: 50,
-                  width: 400,
+
                   decoration: BoxDecoration(
                       color: const Color(0xff3C79E6),
                       borderRadius: BorderRadius.circular(10)),
@@ -140,8 +140,8 @@ class _SignInPageState extends State<SignInPage> {
                 )
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

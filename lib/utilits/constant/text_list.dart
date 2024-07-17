@@ -23,6 +23,7 @@ static const String speaker ="Speakers";
 static const String avail ="100+ Product";
 static const String headPhone ="Headphones";
 static const String list ="15+ Product";
+
 //New Line
 static const String line ='Recommended for You';
 // Product Name
