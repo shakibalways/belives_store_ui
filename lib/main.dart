@@ -1,3 +1,4 @@
+import 'package:belives_store/screens/pages/bottom_navigation/bottom_nav.dart';
 import 'package:belives_store/screens/pages/user/profile.dart';
 
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class BelivesStore extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfilePage(),
+      home: BottomNav(),
     );
   }
 }

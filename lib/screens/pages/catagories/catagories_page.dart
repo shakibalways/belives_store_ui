@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import '../../../global_wieght/custom_container.dart';
+
 import '../../../global_wieght/custom_divider.dart';
 
 class CatagoriesPage extends StatefulWidget {

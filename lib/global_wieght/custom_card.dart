@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../utilits/constant/text_list.dart';
+
 
 class CustomCard extends StatelessWidget {
   final String image;

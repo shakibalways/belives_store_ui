@@ -1,11 +1,13 @@
 import 'package:belives_store/data%20model/productof_list.dart';
 import 'package:belives_store/global_wieght/custom_card.dart';
-import 'package:belives_store/utilits/constant/image_list.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../../../utilits/constant/text_list.dart';
+import '../order_page/my_cart.dart';
+import '../search_item/search_page.dart';
+import '../user/profile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,9 +17,49 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int currentIndex = 0;
+
+// static const  List<Widget> pages =<Widget> [
+//     HomePage(),
+//     SearchPage(),
+//     MyCart(),
+//     ProfilePage(),
+//   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // bottomNavigationBar: Padding(
+      //   padding: EdgeInsets.all(8.0),
+      //   child: GNav(
+      //     gap: 8,
+      //     padding: EdgeInsets.all(15),
+      //     tabBackgroundColor: Color(0xffC6AB59),
+      //     tabs: [
+      //       GButton(
+      //         icon: Icons.home,
+      //         text: 'Home',
+      //       ),
+      //       GButton(
+      //         icon: Icons.search,
+      //         text: 'Search',
+      //       ),
+      //       GButton(
+      //         icon: Icons.shopping_bag,
+      //         text: 'Shooping',
+      //       ),
+      //       GButton(
+      //         icon: Icons.person_outline,
+      //         text: 'User',
+      //       ),
+      //     ],
+      //     selectedIndex: currentIndex,
+      //     onTabChange: (index) {
+      //       setState(() {
+      //         currentIndex = index;
+      //       });
+      //     },
+      //   ),
+      // ),
       appBar: AppBar(
         leading: const Icon(
           Icons.menu_open_sharp,

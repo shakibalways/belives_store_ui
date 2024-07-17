@@ -12,7 +12,7 @@ import '../../../screens/pages/search_item/search_result.dart';
 class SignInPage extends StatefulWidget {
 
 
-   SignInPage({super.key});
+   const SignInPage({super.key});
 
   @override
   State<SignInPage> createState() => _SignInPageState();

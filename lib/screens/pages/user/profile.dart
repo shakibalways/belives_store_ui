@@ -21,31 +21,6 @@ class _ProfilePageState extends State<ProfilePage> {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      bottomNavigationBar: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: GNav(
-            gap: 8,
-            padding: EdgeInsets.all(15),
-            tabBackgroundColor: Color(0xffC6AB59),
-            tabs: [
-              GButton(
-                icon: Icons.home,
-                text: 'Home',
-              ),
-              GButton(
-                icon: Icons.search,
-                text: 'Search',
-              ),
-              GButton(
-                icon: Icons.shopping_bag,
-                text: 'Shooping',
-              ),
-              GButton(
-                icon: Icons.person_outline,
-                text: 'User',
-              ),
-            ]),
-      ),
       body: Column(
         children: [
           Stack(clipBehavior: Clip.none, children: [

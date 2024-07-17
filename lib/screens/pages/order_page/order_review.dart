@@ -73,7 +73,6 @@ class _OrderReviewState extends State<OrderReview> {
              const Text("SHIPPING"),
              const SizedBox(height: 10,),
              Row(
-
                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                children: [
                  const Icon(Icons.pin_drop),
