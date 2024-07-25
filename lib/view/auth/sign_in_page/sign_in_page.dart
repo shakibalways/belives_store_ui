@@ -2,9 +2,8 @@ import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/global_wieght/custom_field.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
 import 'package:belives_store/view/auth/register_page/sign_up_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../screens/pages/search_item/search_result.dart';
@@ -35,30 +34,30 @@ class _SignInPageState extends State<SignInPage> {
              Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   RTexts.title,
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                Text(
+                const Text(
                   RTexts.subTitle,
                   style: TextStyle(color: Colors.black87),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 CustomField(
                   controller: nameController ,
                     hintText: 'UserName',
-                    prefixIcon: Icon(Icons.person_outlined),
+                    prefixIcon: const Icon(Icons.person_outlined),
                     labelText: 'UserName or Email'),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomField(
                   controller: passController,
                     hintText: '*********',
-                    prefixIcon: Icon(Icons.lock_person),
-                    suffixIcon: Icon(Icons.remove_red_eye),
+                    prefixIcon: const Icon(Icons.lock_person),
+                    suffixIcon: const Icon(Icons.remove_red_eye),
                     labelText: 'Password'),
               ],
             ),
@@ -76,12 +75,12 @@ class _SignInPageState extends State<SignInPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SearchResult()));
+                              builder: (context) => const SearchResult()));
                     }else{
                       print("Confirm Your All Information");
                     }
                    },
-                   child: CustomContainer(
+                   child: const CustomContainer(
                       title: 'SIGN IN', icon: Icons.arrow_circle_right_sharp),
                  ),
                 const SizedBox(
@@ -93,9 +92,9 @@ class _SignInPageState extends State<SignInPage> {
                     Text("Don't have an account?",style: TextStyle(color: Colors.grey[600]),),
                     InkWell(
                       onTap: (){
-                       Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
+                       Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignUpPage()));
                       },
-                      child: Text(
+                      child: const Text(
                         "Sign Up",
                         style: TextStyle(
                             color: Colors.black,

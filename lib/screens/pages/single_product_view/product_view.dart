@@ -1,4 +1,4 @@
-import 'package:belives_store/global_wieght/custom_appbar.dart';
+
 import 'package:belives_store/global_wieght/custom_container.dart';
 
 import 'package:flutter/material.dart';
@@ -14,9 +14,9 @@ class _SingleProductViewState extends State<SingleProductView> {
   int selectedColorIndex = 0;
 
   List mycolors = <Color>[
-    Color(0xffC6AB59),
-    Color(0xffF8B6C3),
-    Color(0xff171717),
+    const Color(0xffC6AB59),
+    const Color(0xffF8B6C3),
+    const Color(0xff171717),
   ];
   // Color primaryColor=;
 
@@ -121,7 +121,7 @@ class _SingleProductViewState extends State<SingleProductView> {
                               });
                             },
                             child: Container(
-                              margin: EdgeInsets.only(right: 5),
+                              margin: const EdgeInsets.only(right: 5),
                               width: 40,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),

@@ -1,12 +1,12 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 
 
 import '../../../global_wieght/custom_divider.dart';
 
 class CatagoriesPage extends StatefulWidget {
-  CatagoriesPage({super.key});
+  const CatagoriesPage({super.key});
 
   @override
   State<CatagoriesPage> createState() => _CatagoriesPageState();

@@ -28,43 +28,43 @@ class _SignUpPageState extends State<SignUpPage> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   RTexts.getting,
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
-                Text(
+                const Text(
                   RTexts.sub,
                   style: TextStyle(color: Colors.black87),
                 ),
                 CustomField(
                     controller: gmailController,
                     hintText: 'shakibmohammad18@gmail.com',
-                    prefixIcon: Icon(Icons.mail),
+                    prefixIcon: const Icon(Icons.mail),
                     labelText: 'Email'),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomField(
                     controller: nameController,
                     hintText: 'abdullah al shakib',
-                    prefixIcon: Icon(Icons.person_outlined),
-                    suffixIcon: Icon(
+                    prefixIcon: const Icon(Icons.person_outlined),
+                    suffixIcon: const Icon(
                       Icons.check,
                       color: Colors.blue,
                     ),
                     labelText: 'Username '),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomField(
                     controller: passController,
                     hintText: '*********',
-                    prefixIcon: Icon(Icons.lock_person),
-                    suffixIcon: Icon(Icons.remove_red_eye),
+                    prefixIcon: const Icon(Icons.lock_person),
+                    suffixIcon: const Icon(Icons.remove_red_eye),
                     labelText: 'Password'),
               ],
             ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
 
 
               // Button List
@@ -91,7 +91,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             //     MaterialPageRoute(
                             //         builder: (context) => SearchResult()));
                           },
-                          child: Text(
+                          child: const Text(
                             'Sign In',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,

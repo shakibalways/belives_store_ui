@@ -1,6 +1,6 @@
 
 
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../global_wieght/custom_container.dart';
@@ -43,7 +43,7 @@ class OnboardingPage extends StatelessWidget {
             //CustomButton
             GestureDetector(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignInPage()));
                 
               },
               child: const CustomContainer(

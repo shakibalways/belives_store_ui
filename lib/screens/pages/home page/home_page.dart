@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
       //   ),
       // ),
       appBar: customappBar(
-        leading: Icon(Icons.menu_open_sharp,size: 32,)
+        leading: const Icon(Icons.menu_open_sharp,size: 32,)
       ),
       body: Column(
         children: [
