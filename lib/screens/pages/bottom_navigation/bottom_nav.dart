@@ -8,7 +8,7 @@ import 'package:belives_store/screens/pages/user/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import '../home page/home_page.dart';
+
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});

@@ -1,3 +1,4 @@
+import 'package:belives_store/global_wieght/custom_appbar.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/global_wieght/custom_divider.dart';
 import 'package:flutter/material.dart';
@@ -10,15 +11,7 @@ class LocationAddress extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        leading: const Icon(Icons.arrow_back_rounded),
-        title: const Text(
-          "SHIPPING",
-          style: TextStyle(fontSize: 16),
-        ),
-        centerTitle: true,
-        actions: const [Icon(Icons.more_horiz)],
-      ),
+  appBar: customappBar(),
       body: SingleChildScrollView(
         child: SizedBox(
             height: height * 1,

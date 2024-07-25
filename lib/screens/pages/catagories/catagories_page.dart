@@ -14,6 +14,7 @@ class CatagoriesPage extends StatefulWidget {
 
 class _CatagoriesPageState extends State<CatagoriesPage> {
   double value = 20;
+  int colorIndex =0;
   List<String> boxColor=[
     "0xffC6AB59",
     "0xff02C697",
@@ -25,8 +26,6 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
     "0xffF8B6C3",
     "0xff02C697",
   ];
-
-
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -204,14 +203,22 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                   itemBuilder: (context, index) {
                                     return Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: Container(
+                                      child: GestureDetector(
+                                        onTap: (){
+                                          setState(() {
+                                        colorIndex=colorIndex;
+                                        print("yes");
+                                          });
+                                        },
+                                        child: Container(
 
-                                        width: 70,
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(10),
-                                            color:Color(int.parse(boxColor[index]))
+                                          width: 70,
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(10),
+                                              color:Color(int.parse(boxColor[index]))
+                                          ),
+
                                         ),
-
                                       ),
                                     );
                                   }),

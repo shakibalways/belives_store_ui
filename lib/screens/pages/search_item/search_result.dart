@@ -1,6 +1,6 @@
 
 
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../global_wieght/conatiner_custom.dart';
@@ -141,7 +141,6 @@ class _SearchResultState extends State<SearchResult> {
                 ),
                 myList.isNotEmpty
                     ? GridView.builder(
-
                         padding: const EdgeInsets.all(10),
                         shrinkWrap: true,
                         itemCount: myList.length,

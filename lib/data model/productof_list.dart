@@ -14,5 +14,6 @@ class ProductItem {
 List<ProductItem> productList = [
   ProductItem(imagePath: RImages.beosound, text: RTexts.speaker, texts:RTexts.avail),
   ProductItem(imagePath: RImages.head, text: RTexts.headPhone, texts: RTexts.list),
+  ProductItem(imagePath: RImages.head, text: RTexts.headPhone, texts: RTexts.list),
 
 ];

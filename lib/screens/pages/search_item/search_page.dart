@@ -37,10 +37,11 @@ class _SearchPageState extends State<SearchPage> {
                     )),
               ),
             ),
-            CustomDivider(
+            const CustomDivider(
               indent: 20,
               endIndent: 20,
             ),
+            //Recent Searches
             const Text(
               "RECENT SEARCHES",
               style: TextStyle(
@@ -48,9 +49,9 @@ class _SearchPageState extends State<SearchPage> {
                   fontWeight: FontWeight.bold,
                   color: Colors.grey),
             ),
-            Column(
+            const Column(
               children: [
-                const ListTile(
+                ListTile(
                   leading: Icon(Icons.access_alarms_outlined),
                   title: Text("Beosound 1"),
                   trailing: Icon(Icons.close),
@@ -59,7 +60,7 @@ class _SearchPageState extends State<SearchPage> {
                   indent: 20,
                   endIndent: 20,
                 ),
-                const ListTile(
+                ListTile(
                   leading: Icon(Icons.access_alarms_outlined),
                   title: Text("Beosound Balance"),
                   trailing: Icon(Icons.close),
@@ -68,7 +69,7 @@ class _SearchPageState extends State<SearchPage> {
                   indent: 20,
                   endIndent: 20,
                 ),
-                const ListTile(
+                ListTile(
                   leading: Icon(Icons.access_alarms_outlined),
                   title: Text("Beolit 17"),
                   trailing: Icon(Icons.close),
@@ -79,6 +80,10 @@ class _SearchPageState extends State<SearchPage> {
                 ),
               ],
             ),
+            //Recent Searches
+
+
+            //Popular Searches
             const Column(
               children: [
                 Text(
@@ -106,7 +111,9 @@ class _SearchPageState extends State<SearchPage> {
                   ],
                 )
               ],
-            )
+            ),
+            //Popular Searches
+
           ],
         ),
       ),
