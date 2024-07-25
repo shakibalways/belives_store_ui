@@ -1,15 +1,15 @@
 import '../utilits/constant/image_list.dart';
 import '../utilits/constant/text_list.dart';
 
-class OrderReview{
+class OrderReviews{
   final String imagePath;
   final String text;
-  OrderReview( {required this.text,required this.imagePath});
+  OrderReviews( {required this.text,required this.imagePath});
 }
-List<OrderReview> placeOrder=[
-  OrderReview(imagePath: RImages.beosound,text:RTexts.b),
-  OrderReview(imagePath:  RImages.beosound, text:RTexts.c ),
-  OrderReview(imagePath: RImages.heads, text: RTexts.d),
-  OrderReview(imagePath: RImages.be, text: RTexts.e),
+List<OrderReviews> placeOrder=[
+  OrderReviews(imagePath: RImages.beosound,text:RTexts.b),
+  OrderReviews(imagePath:  RImages.beosound, text:RTexts.c ),
+  OrderReviews(imagePath: RImages.heads, text: RTexts.d),
+  OrderReviews(imagePath: RImages.be, text: RTexts.e),
 
 ];

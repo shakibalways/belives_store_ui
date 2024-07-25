@@ -1,4 +1,5 @@
 import 'package:belives_store/data%20model/order_list.dart';
+import 'package:belives_store/global_wieght/custom_appbar.dart';
 import 'package:belives_store/global_wieght/custom_divider.dart';
 import 'package:flutter/material.dart';
 
@@ -15,14 +16,11 @@ class _OrderReviewState extends State<OrderReview> {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        leading: const Icon(Icons.arrow_back_rounded),
-        title: const Text(
-          "ORDER REVIEW",
-          style: TextStyle(fontSize: 16),
-        ),
-        centerTitle: true,
-        actions: const [Icon(Icons.more_horiz)],
+      appBar: customappBar(
+          title: const Text(
+            "ORDER REVIEW",
+            style: TextStyle(fontSize: 16),
+      ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),

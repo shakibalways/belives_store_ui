@@ -63,8 +63,8 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Gender",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
-                                SizedBox(height: 10,),
+                                const Text("Gender",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                                const SizedBox(height: 10,),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
@@ -72,9 +72,9 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                       height: 60,
                                       width: 120,
                                       decoration: BoxDecoration(
-                                          color: Color(0xffC6AB59),
+                                          color: const Color(0xffC6AB59),
                                           borderRadius: BorderRadius.circular(10)),
-                                      child: Center(
+                                      child: const Center(
                                         child: Text(
                                           "Men",
                                           style:
@@ -86,9 +86,9 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                       height: 60,
                                       width: 120,
                                       decoration: BoxDecoration(
-                                          color: Color(0xffF3F6F8),
+                                          color: const Color(0xffF3F6F8),
                                           borderRadius: BorderRadius.circular(10)),
-                                      child: Center(
+                                      child: const Center(
                                         child: Text(
                                           "Women",
                                           style:
@@ -100,9 +100,9 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                       height: 60,
                                       width: 120,
                                       decoration: BoxDecoration(
-                                          color: Color(0xffF3F6F8),
+                                          color: const Color(0xffF3F6F8),
                                           borderRadius: BorderRadius.circular(10)),
-                                      child: Center(
+                                      child: const Center(
                                         child: Text(
                                           "Both",
                                           style:
@@ -112,14 +112,14 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 10,),
-                                CustomDivider(),
+                                const SizedBox(height: 10,),
+                                const CustomDivider(),
                               ],
                             ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "Price Rate",
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
@@ -142,8 +142,8 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                     width: 190,
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(10),
-                                        color: Color(0xffF3F6F8)),
-                                    child: Center(
+                                        color: const Color(0xffF3F6F8)),
+                                    child: const Center(
                                         child: Row(
                                           mainAxisAlignment:
                                           MainAxisAlignment.spaceAround,
@@ -165,8 +165,8 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                     width: 190,
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(10),
-                                        color: Color(0xffF3F6F8)),
-                                    child: Center(
+                                        color: const Color(0xffF3F6F8)),
+                                    child: const Center(
                                         child: Row(
                                           mainAxisAlignment:
                                           MainAxisAlignment.spaceAround,
@@ -182,14 +182,14 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                   )
                                 ],
                               ),
-                              SizedBox(height: 20,),
-                              CustomDivider(),
+                              const SizedBox(height: 20,),
+                              const CustomDivider(),
                             ],
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                            Text(
+                            const Text(
                               "Color",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 18),
@@ -231,7 +231,7 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                   },
                 );
               },
-              child: Icon(
+              child: const Icon(
                 Icons.import_export,
                 size: 30,
               ),

@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 PreferredSizeWidget customappBar({
@@ -9,12 +9,11 @@ PreferredSizeWidget customappBar({
 }) {
   return AppBar(
     leading: const Icon(Icons.arrow_back_rounded),
-    title: const Text(
-      "SHIPPING",
-      style: TextStyle(fontSize: 16),
-    ),
+    title: title,
     centerTitle: true,
-    actions: action,
+    actions: [
+      Icon(Icons.more_horiz)
+    ],
   );
 }
 

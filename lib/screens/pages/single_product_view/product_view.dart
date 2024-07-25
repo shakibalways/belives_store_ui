@@ -1,8 +1,7 @@
+import 'package:belives_store/global_wieght/custom_appbar.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 class SingleProductView extends StatefulWidget {
   const SingleProductView({super.key});
