@@ -1,4 +1,4 @@
-import 'package:belives_store/screens/pages/splash_screen/splash_screen.dart';
+import 'package:belives_store/views/pages/user_profile/user_profile.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: UserProfilePage(),
     );
   }
 }
