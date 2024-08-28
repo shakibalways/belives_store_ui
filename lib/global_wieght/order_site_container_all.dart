@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../data model/productof_list.dart';
 import 'custom_container.dart';
@@ -13,7 +11,7 @@ class DetailsContainerCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
-    return  Container(
+    return Container(
       height: height * .53,
       width: width * .82,
       decoration: BoxDecoration(
@@ -57,8 +55,7 @@ class DetailsContainerCustom extends StatelessWidget {
                             color: const Color(0xffF3F6F8),
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Image.asset(
-                              productList[index].imagePath),
+                          child: Image.asset(productList[index].imagePath),
                         ),
                       );
                     }),
@@ -107,7 +104,7 @@ class DetailsContainerCustom extends StatelessWidget {
                                   topLeft: Radius.circular(10),
                                   topRight: Radius.circular(10))),
                           child: SingleChildScrollView(
-                            physics: PageScrollPhysics(),
+                            physics: const PageScrollPhysics(),
                             child: Column(
                               children: [
                                 Container(
@@ -116,8 +113,7 @@ class DetailsContainerCustom extends StatelessWidget {
                                   width: 110,
                                   decoration: BoxDecoration(
                                     color: const Color(0xffC6AB59),
-                                    borderRadius:
-                                    BorderRadius.circular(30),
+                                    borderRadius: BorderRadius.circular(30),
                                   ),
                                   child: Center(
                                     child: Image.asset(
@@ -126,7 +122,9 @@ class DetailsContainerCustom extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                const SizedBox(height: 15,),
+                                const SizedBox(
+                                  height: 15,
+                                ),
                                 const Text(
                                   "Tracking Order",
                                   style: TextStyle(
@@ -138,7 +136,9 @@ class DetailsContainerCustom extends StatelessWidget {
                                 ),
                                 const Text(
                                     "Enter up to 25 tracking numbers, one per line."),
-                                const SizedBox(height: 8,),
+                                const SizedBox(
+                                  height: 8,
+                                ),
                                 const CustomDivider(),
                                 Padding(
                                   padding: const EdgeInsets.all(20),
@@ -147,17 +147,13 @@ class DetailsContainerCustom extends StatelessWidget {
                                     child: TextField(
                                       decoration: InputDecoration(
                                           hintText: "Enter Code",
-                                          suffixIcon:
-                                          const Icon(Icons.search),
+                                          suffixIcon: const Icon(Icons.search),
                                           filled: true,
-                                          hoverColor:
-                                          const Color(0xfff2f2f2),
+                                          hoverColor: const Color(0xfff2f2f2),
                                           border: OutlineInputBorder(
                                               borderRadius:
-                                              BorderRadius.circular(
-                                                  10),
-                                              borderSide:
-                                              BorderSide.none)),
+                                                  BorderRadius.circular(10),
+                                              borderSide: BorderSide.none)),
                                     ),
                                   ),
                                 ),
@@ -186,8 +182,7 @@ class DetailsContainerCustom extends StatelessWidget {
                     child: Text(
                       "Track",
                       style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
+                          color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),

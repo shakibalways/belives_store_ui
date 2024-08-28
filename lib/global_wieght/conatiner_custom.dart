@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ContainerCustom extends StatelessWidget {
@@ -28,7 +27,7 @@ class ContainerCustom extends StatelessWidget {
           ]),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Image.asset(
@@ -36,7 +35,7 @@ class ContainerCustom extends StatelessWidget {
             height: 170,
             fit: BoxFit.fitHeight,
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Text(

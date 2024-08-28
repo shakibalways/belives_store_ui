@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 PreferredSizeWidget customappBar({
@@ -11,10 +10,10 @@ PreferredSizeWidget customappBar({
     leading: const Icon(Icons.arrow_back_rounded),
     title: title,
     centerTitle: true,
-    actions: [
-      Icon(Icons.more_horiz)
+    actions: const [
+      Icon(
+        Icons.more_horiz,
+      ),
     ],
   );
 }
-
-

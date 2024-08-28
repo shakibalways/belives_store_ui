@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/global_wieght/custom_field.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
@@ -77,7 +79,7 @@ class _SignInPageState extends State<SignInPage> {
                           MaterialPageRoute(
                               builder: (context) => const SearchResult()));
                     }else{
-                      print("Confirm Your All Information");
+                      log("Confirm Your All Information");
                     }
                    },
                    child: const CustomContainer(

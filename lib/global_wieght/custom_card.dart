@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-
 
 class CustomCard extends StatelessWidget {
   final String image;
@@ -22,14 +19,14 @@ class CustomCard extends StatelessWidget {
         SizedBox(
           width: 220,
           child: Card(
-            shape: RoundedRectangleBorder(
+            shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(80),
                     topRight: Radius.circular(30),
                     bottomRight: Radius.circular(30),
                     bottomLeft: Radius.circular(30))),
             semanticContainer: false,
-            color: Color(0xffF3F6F8),
+            color: const Color(0xffF3F6F8),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -39,7 +36,7 @@ class CustomCard extends StatelessWidget {
                 ),
                 Text(
                   text,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 Text(
                   texts,

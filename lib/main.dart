@@ -1,24 +1,18 @@
-
-import 'package:belives_store/screens/pages/order_page/order_failed.dart';
-
-
-
+import 'package:belives_store/screens/pages/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
-
-
 void main() {
-  runApp(const BelivesStore());
+  runApp(const MyApp());
 }
 
-class BelivesStore extends StatelessWidget {
-  const BelivesStore({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  const MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OrderFailed(),
+      home: SplashScreen(),
     );
   }
 }

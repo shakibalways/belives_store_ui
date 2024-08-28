@@ -1,7 +1,4 @@
-
-
 import 'dart:async';
-
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gradient_animation_text/flutter_gradient_animation_text.dart';
@@ -20,26 +17,25 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(const Duration(seconds: 3),
-            ()=>Navigator.pushReplacement(context,
-            MaterialPageRoute(builder:
-                (context) =>const OnboardingPage(),
-
-            )
-        )
+    Timer(
+      const Duration(seconds: 3),
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const OnboardingPage(),
+        ),
+      ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
-    
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Image.asset("assets/images/onboardingimage.png"),
-
 
           // Tranform Text
           const GradientAnimationText(
@@ -55,11 +51,10 @@ class _SplashScreenState extends State<SplashScreen> {
               Colors.black,
             ],
             duration: Duration(seconds: 2),
-              // tranform
+            // tranform
           ),
         ],
       ),
-      
     );
   }
 }

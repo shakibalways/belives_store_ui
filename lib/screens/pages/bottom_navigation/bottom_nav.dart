@@ -1,14 +1,9 @@
-
-
-
 import 'package:belives_store/screens/pages/order_page/my_cart.dart';
 import 'package:belives_store/screens/pages/search_item/search_page.dart';
 import 'package:belives_store/screens/pages/search_item/search_result.dart';
 import 'package:belives_store/screens/pages/user/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-
-
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});

@@ -1,14 +1,9 @@
-
-
-
 import 'package:flutter/material.dart';
-
 import '../../../global_wieght/conatiner_custom.dart';
 import '../../../global_wieght/custom_divider.dart';
 
 class SearchResult extends StatefulWidget {
   const SearchResult({super.key});
-
   @override
   State<SearchResult> createState() => _SearchResultState();
 }
@@ -73,11 +68,12 @@ class _SearchResultState extends State<SearchResult> {
     },
   ];
   List myList = [];
-
   void searchUser(String name) {
     myList = productItem
-        .where((element) =>
-            element.toString().toLowerCase().contains(name.toString().toLowerCase()))
+        .where((element) => element
+            .toString()
+            .toLowerCase()
+            .contains(name.toString().toLowerCase()))
         .toList();
     setState(() {});
   }
@@ -107,15 +103,16 @@ class _SearchResultState extends State<SearchResult> {
                         filled: true,
                         hoverColor: const Color(0xfff2f2f2),
                         hintText: "Search",
-                        suffixIcon: searchController.text.isNotEmpty?InkWell(
-                            onTap: (){
-                              setState(() {
-                                searchController.clear();
-                                myList = productItem;
-                              });
-
-                            },
-                            child: const Icon(Icons.close)):const Icon(Icons.search),
+                        suffixIcon: searchController.text.isNotEmpty
+                            ? InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    searchController.clear();
+                                    myList = productItem;
+                                  });
+                                },
+                                child: const Icon(Icons.close))
+                            : const Icon(Icons.search),
                         border: OutlineInputBorder(
                           borderSide: BorderSide.none,
                           borderRadius: BorderRadius.circular(10),
@@ -145,12 +142,12 @@ class _SearchResultState extends State<SearchResult> {
                         shrinkWrap: true,
                         itemCount: myList.length,
                         physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                          childAspectRatio: 0.7,
-
-                            crossAxisCount: 2,
-                            mainAxisSpacing: 20,
-                            crossAxisSpacing: 20),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                childAspectRatio: 0.7,
+                                crossAxisCount: 2,
+                                mainAxisSpacing: 20,
+                                crossAxisSpacing: 20),
                         itemBuilder: (context, index) {
                           return ContainerCustom(
                               image: myList[index]["image"],

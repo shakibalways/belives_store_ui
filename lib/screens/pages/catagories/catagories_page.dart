@@ -1,8 +1,7 @@
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-
-
-
 import '../../../global_wieght/custom_divider.dart';
 
 class CatagoriesPage extends StatefulWidget {
@@ -207,7 +206,7 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                         onTap: (){
                                           setState(() {
                                         colorIndex=colorIndex;
-                                        print("yes");
+                                        log("yes");
                                           });
                                         },
                                         child: Container(
