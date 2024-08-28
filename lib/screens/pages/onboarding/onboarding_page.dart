@@ -1,12 +1,9 @@
-
-
-
+import 'package:belives_store/global_wieght/custom_container.dart';
+import 'package:belives_store/utilits/constant/image_list.dart';
+import 'package:belives_store/utilits/constant/text_list.dart';
+import 'package:belives_store/view/auth/sign_in_page/sign_in_page.dart';
 import 'package:flutter/material.dart';
 
-import '../../../global_wieght/custom_container.dart';
-import '../../../utilits/constant/image_list.dart';
-import '../../../utilits/constant/text_list.dart';
-import '../../../view/auth/sign_in_page/sign_in_page.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
