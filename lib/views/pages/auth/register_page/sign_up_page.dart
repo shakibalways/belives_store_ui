@@ -1,6 +1,5 @@
 import 'package:belives_store/components/my_custom_text.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
-import 'package:belives_store/global_wieght/custom_field.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
 import 'package:belives_store/views/pages/auth/register_page/widgets/my_user_name_field.dart';
 import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_email_field.dart';
@@ -14,8 +13,8 @@ class SignUpPage extends StatefulWidget {
   @override
   State<SignUpPage> createState() => _SignUpPageState();
 }
-
 class _SignUpPageState extends State<SignUpPage> {
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   TextEditingController gmailController = TextEditingController();
   TextEditingController nameController = TextEditingController();
   TextEditingController passController = TextEditingController();
@@ -45,22 +44,25 @@ class _SignUpPageState extends State<SignUpPage> {
                 ],
               ),
               // Form List
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  MyUserNameField(controller: nameController),
-                  const SizedBox(height: 30),
-                  MyEmailField(
-                    controller: gmailController,
-                    hText: "shakibmohammad18@gmail.com",
-                    lText: "E-mail",
-                  ),
-                  const SizedBox(height: 30),
-               MyPasswordField(controller: passController),
-                ],
+              Form(
+                key: formKey,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    MyUserNameField(controller: nameController),
+                    const SizedBox(height: 30),
+                    MyEmailField(
+                      controller: gmailController,
+                      hText: "shakibmohammad18@gmail.com",
+                      lText: "E-mail",
+                    ),
+                    const SizedBox(height: 30),
+                 MyPasswordField(controller: passController),
+                  ],
+                ),
               ),
-              const SizedBox(height: 10),
 
+              const SizedBox(height: 10),
               // Button List
               Column(
                 children: [

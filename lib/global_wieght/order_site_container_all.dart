@@ -36,9 +36,7 @@ class DetailsContainerCustom extends StatelessWidget {
                   )
                 ],
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               const CustomDivider(),
               SizedBox(
                 height: 110,
@@ -80,16 +78,12 @@ class DetailsContainerCustom extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 18),
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               const Text(
                 "Orders will arrive in 3 days!",
                 style: TextStyle(fontWeight: FontWeight.w300),
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 20),
               GestureDetector(
                 onTap: () {
                   showModalBottomSheet(
@@ -122,23 +116,17 @@ class DetailsContainerCustom extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                const SizedBox(
-                                  height: 15,
-                                ),
+                                const SizedBox(height: 15),
                                 const Text(
                                   "Tracking Order",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 22),
                                 ),
-                                const SizedBox(
-                                  height: 8,
-                                ),
+                                const SizedBox(height: 8),
                                 const Text(
                                     "Enter up to 25 tracking numbers, one per line."),
-                                const SizedBox(
-                                  height: 8,
-                                ),
+                                const SizedBox(height: 8),
                                 const CustomDivider(),
                                 Padding(
                                   padding: const EdgeInsets.all(20),
@@ -157,14 +145,11 @@ class DetailsContainerCustom extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
+                                const SizedBox(height: 10),
                                 const Padding(
                                   padding: EdgeInsets.all(20),
                                   child: CustomContainer(
-                                    title: "Apply Filters (4)",
-                                  ),
+                                      title: "Apply Filters (4)"),
                                 )
                               ],
                             ),
@@ -198,9 +183,7 @@ class DetailsContainerCustom extends StatelessWidget {
                     Icons.person_outline,
                     size: 35,
                   ),
-                  SizedBox(
-                    width: 10,
-                  ),
+                  SizedBox(width: 10),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -219,7 +202,7 @@ class DetailsContainerCustom extends StatelessWidget {
               Icon(
                 Icons.arrow_right_alt,
                 size: 35,
-              )
+              ),
             ],
           ),
         ],
