@@ -1,10 +1,17 @@
+import 'package:belives_store/components/my_custom_container.dart';
 import 'package:belives_store/components/my_custom_text.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/global_wieght/custom_divider.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomBottomSheet extends StatelessWidget {
-  const MyCustomBottomSheet({super.key});
+  final TextEditingController controller;
+  final String bName;
+  const MyCustomBottomSheet({
+    super.key,
+    required this.controller,
+    required this.bName,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +31,12 @@ class MyCustomBottomSheet extends StatelessWidget {
         physics: const PageScrollPhysics(),
         child: Column(
           children: [
-            Container(
+            MyCustomContainer(
               margin: const EdgeInsets.only(top: 80),
-              height: 110,
-              width: 110,
-              decoration: BoxDecoration(
-                color: const Color(0xffC6AB59),
-                borderRadius: BorderRadius.circular(30),
-              ),
+              height: height * 0.13,
+              width: width * 0.25,
+              color: const Color(0xffC6AB59),
+              bRadius: BorderRadius.circular(30),
               child: Center(
                 child: Image.asset(
                   "assets/images/alarm.png",
@@ -54,6 +59,7 @@ class MyCustomBottomSheet extends StatelessWidget {
               child: SizedBox(
                 height: 60,
                 child: TextField(
+                  controller: controller,
                   decoration: InputDecoration(
                     hintText: "Enter Code",
                     suffixIcon: const Icon(Icons.search),
@@ -67,9 +73,9 @@ class MyCustomBottomSheet extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Padding(
-              padding: EdgeInsets.all(20),
-              child: CustomContainer(title: "Apply Filters (4)"),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: CustomContainer(title: bName),
             )
           ],
         ),

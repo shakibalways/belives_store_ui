@@ -1,3 +1,4 @@
+import 'package:belives_store/components/my_custom_container.dart';
 import 'package:belives_store/components/my_custom_text.dart';
 import 'package:belives_store/data%20model/productof_list.dart';
 import 'package:belives_store/global_wieght/custom_divider.dart';
@@ -12,6 +13,7 @@ class UserProfilePage extends StatefulWidget {
 }
 
 class _UserProfilePageState extends State<UserProfilePage> {
+  final TextEditingController codeController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -35,14 +37,12 @@ class _UserProfilePageState extends State<UserProfilePage> {
                       )),
                   child: Column(
                     children: [
-                      Container(
+                      MyCustomContainer(
                         margin: const EdgeInsets.only(top: 80),
                         height: height * 0.12,
                         width: width * 0.25,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(30),
-                        ),
+                        color: Colors.black,
+                        bRadius: BorderRadius.circular(30),
                         child: Center(
                           child: CircleAvatar(
                             radius: 40,
@@ -54,7 +54,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      buildSizedBox(height: 20),
                       const MyCustomText(
                           title: "SHAKIB", fSize: 25, fWeight: FontWeight.bold),
                       const SizedBox(height: 10),
@@ -93,29 +93,27 @@ class _UserProfilePageState extends State<UserProfilePage> {
                                 )
                               ],
                             ),
-                            const SizedBox(height: 10),
+                            buildSizedBox(height: 10),
                             const CustomDivider(),
                             SizedBox(
-                              height: 110,
+                              height: height * 0.12,
                               child: ListView.builder(
-                                  shrinkWrap: true,
-                                  scrollDirection: Axis.horizontal,
-                                  itemCount: productList.length,
-                                  itemBuilder: (context, index) {
-                                    return Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Container(
-                                        width: 100,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xffF3F6F8),
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                        child: Image.asset(
-                                            productList[index].imagePath),
-                                      ),
-                                    );
-                                  }),
+                                shrinkWrap: true,
+                                scrollDirection: Axis.horizontal,
+                                itemCount: productList.length,
+                                itemBuilder: (context, index) {
+                                  return Padding(
+                                    padding: const EdgeInsets.all(10),
+                                    child: MyCustomContainer(
+                                      width: width * 0.22,
+                                      color: const Color(0xffF3F6F8),
+                                      bRadius: BorderRadius.circular(20),
+                                      child: Image.asset(
+                                          productList[index].imagePath),
+                                    ),
+                                  );
+                                },
+                              ),
                             ),
                             const Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -130,34 +128,38 @@ class _UserProfilePageState extends State<UserProfilePage> {
                         ),
                         Column(
                           children: [
-                            const MyCustomText(title: "Your order is on its way!",fWeight: FontWeight.bold,),
-                            const SizedBox(height: 10),
-                            const Text(
-                              "Orders will arrive in 3 days!",
-                              style: TextStyle(fontWeight: FontWeight.w300),
+                            const MyCustomText(
+                              title: "Your order is on its way!",
+                              fWeight: FontWeight.bold,
                             ),
-                            const SizedBox(height: 20),
+                            const SizedBox(height: 10),
+                            const MyCustomText(
+                                title: "Orders will arrive in 3 days!",
+                                fSize: 14,
+                                fWeight: FontWeight.w300),
+                            buildSizedBox(height: 30),
                             GestureDetector(
                               onTap: () {
                                 showModalBottomSheet(
                                   context: context,
                                   builder: (BuildContext context) {
-                                    return const MyCustomBottomSheet();
+                                    return MyCustomBottomSheet(
+                                      controller: codeController,
+                                      bName: '"Apply Filters (4)"',
+                                    );
                                   },
                                 );
                               },
-                              child: Container(
+                              child: MyCustomContainer(
                                 height: height * .05,
                                 width: width * .46,
-                                decoration: BoxDecoration(
-                                    color: const Color(0xffC6AB59),
-                                    borderRadius: BorderRadius.circular(10)),
+                                color: const Color(0xffC6AB59),
+                                bRadius: BorderRadius.circular(10),
                                 child: const Center(
-                                  child: Text(
-                                    "Track",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
+                                  child: MyCustomText(
+                                    title: "Track",
+                                    color: Colors.white,
+                                    fWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
@@ -200,4 +202,8 @@ class _UserProfilePageState extends State<UserProfilePage> {
       ),
     );
   }
+  SizedBox buildSizedBox({double? height, double? width}) => SizedBox(
+        height: height,
+        width: width,
+      );
 }

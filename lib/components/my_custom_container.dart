@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyCustomContainer extends StatelessWidget {
-  final double height;
+  final double ? height;
   final double width;
   final Color? color;
   final Widget? child;
@@ -10,7 +10,7 @@ class MyCustomContainer extends StatelessWidget {
 
   const MyCustomContainer(
       {super.key,
-      required this.height,
+       this.height,
       required this.width,
       this.color,
       this.child,
@@ -18,8 +18,6 @@ class MyCustomContainer extends StatelessWidget {
       this.bRadius});
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
     return Container(
       margin:margin ,
       height: height,
