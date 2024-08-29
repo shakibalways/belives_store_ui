@@ -18,7 +18,7 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
     const Color(0xffF8B6C3),
     const Color(0xff171717),
   ];
-  // Color primaryColor=;
+  // Color primaryColor
 
   void selectItem(int index) {
     setState(() {
@@ -29,7 +29,6 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
       }
     });
   }
-
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
