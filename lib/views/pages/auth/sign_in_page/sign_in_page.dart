@@ -1,127 +1,98 @@
-import 'dart:developer';
+import 'package:belives_store/components/my_custom_text.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
-import 'package:belives_store/global_wieght/custom_field.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
 import 'package:belives_store/views/pages/auth/register_page/sign_up_page.dart';
+import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_email_field.dart';
+import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_password_field.dart';
 import 'package:belives_store/views/pages/searchResults/search_results.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:get/get.dart';
 
 class SignInPage extends StatefulWidget {
-
-
-   const SignInPage({super.key});
+  const SignInPage({super.key});
 
   @override
   State<SignInPage> createState() => _SignInPageState();
 }
 
 class _SignInPageState extends State<SignInPage> {
-  final TextEditingController nameController =TextEditingController();
-  final TextEditingController passController =TextEditingController();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController passController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Form List
-             Column(
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  RTexts.title,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                MyCustomText(
+                  title: RTexts.title,
+                  fSize: 20,
+                  fWeight: FontWeight.bold,
                 ),
-                const Text(
-                  RTexts.subTitle,
-                  style: TextStyle(color: Colors.black87),
+                MyCustomText(
+                  title: RTexts.subTitle,
+                  fSize: 15,
+                  color: Colors.black87,
                 ),
-                const SizedBox(
-                  height: 80,
-                ),
-                CustomField(
-                  controller: nameController ,
-                    hintText: 'UserName',
-                    prefixIcon: const Icon(Icons.person_outlined),
-                    labelText: 'UserName or Email'),
-                const SizedBox(
-                  height: 30,
-                ),
-                CustomField(
-                  controller: passController,
-                    hintText: '*********',
-                    prefixIcon: const Icon(Icons.lock_person),
-                    suffixIcon: const Icon(Icons.remove_red_eye),
-                    labelText: 'Password'),
               ],
+            ),
+            // Form List
+            Form(
+              key: formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  MyEmailField(controller: nameController),
+                  const SizedBox(height: 30),
+                  MyPasswordField(controller: passController),
+                ],
+              ),
             ),
             // Button List
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                 InkWell(
-                   onTap:() async {
-                     SharedPreferences prefs = await SharedPreferences.getInstance();
-
-                    if(nameController.text.isNotEmpty && passController.text.isNotEmpty){
-                  await prefs.setString('name', nameController.text.toString());
-                  await prefs.setString('pass', passController.text.toString());
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SearchResultPage()));
-                    }else{
-                      log("Confirm Your All Information");
-                    }
-                   },
-                   child: const CustomContainer(
+                InkWell(
+                  onTap: () {
+                    Get.to(() => const SearchResultPage());
+                  },
+                  child: const CustomContainer(
                       title: 'SIGN IN', icon: Icons.arrow_circle_right_sharp),
-                 ),
-                const SizedBox(
-                  height: 20,
                 ),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Don't have an account?",style: TextStyle(color: Colors.grey[600]),),
+                    MyCustomText(
+                      title: "Don't have an account?",
+                      fSize: 16,
+                      color: Colors.grey[600],
+                    ),
                     InkWell(
-                      onTap: (){
-                       Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignUpPage()));
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SignUpPage()));
                       },
-                      child: const Text(
-                        "Sign Up",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold),
+                      child: const MyCustomText(
+                        title: 'Sign Up',
+                        fWeight: FontWeight.bold,
                       ),
-                    )
+                    ),
                   ],
                 ),
-                // RichText(
-                //     text: const TextSpan(
-                //         style: TextStyle(color: Colors.black),
-                //         children: [
-                //       TextSpan(text: "Don't have an account?"),
-                //       TextSpan(
-                //           text: " Sign up",
-                //           style: TextStyle(
-                //               fontWeight: FontWeight.bold,
-                //               fontSize: 18,
-                //               color: Colors.black)),
-                //     ])),
-                const SizedBox(
-                  height: 80,
-                ),
+                const SizedBox(height: 80),
                 Container(
                   height: 50,
-
                   decoration: BoxDecoration(
                       color: const Color(0xff3C79E6),
                       borderRadius: BorderRadius.circular(10)),
@@ -129,10 +100,11 @@ class _SignInPageState extends State<SignInPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Image.asset('assets/images/fblogo.png'),
-                      const Text(
-                        "Connect with Facebook",
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                      const MyCustomText(
+                        title: "Connect with Facebook",
+                        color: Colors.white,
+                        fSize: 16,
+                        fWeight: FontWeight.w700,
                       ),
                     ],
                   ),

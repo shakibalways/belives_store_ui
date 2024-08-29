@@ -16,12 +16,9 @@ class CustomField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-
       child: TextField(
         controller:controller ,
-
         decoration: InputDecoration(
-
             prefix: prefixIcon,
             hintText: hintText,
             labelText: labelText,

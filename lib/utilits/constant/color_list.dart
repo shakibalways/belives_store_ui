@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 class RColors{
-  static const String buttonColor= '0xffC6AB59';
+  static const Color buttonColor= Color(0xffC6AB59);
 }

@@ -1,23 +1,29 @@
-
 import 'package:flutter/material.dart';
 
 import '../utilits/constant/color_list.dart';
 
 class CustomContainer extends StatelessWidget {
+  final double ? width;
   final String title;
   final IconData? icon;
   final double? color;
 
-  const CustomContainer(
-      {super.key, required this.title, this.icon, this.color});
+  const CustomContainer({
+    super.key,
+    required this.title,
+    this.icon,
+    this.color,
+    this.width,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 50,
+      width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Color(int.parse(RColors.buttonColor))),
+          color: RColors.buttonColor),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -28,7 +34,8 @@ class CustomContainer extends StatelessWidget {
           ),
           Icon(
             icon,
-            color: Colors.white,size: 35,
+            color: Colors.white,
+            size: 35,
           ),
         ],
       ),
