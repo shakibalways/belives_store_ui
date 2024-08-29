@@ -184,7 +184,7 @@ class _AddNewCardPageState extends State<AddNewCardPage> {
                         Icons.arrow_right_alt,
                         size: 40,
                         color: Colors.white,
-                      )
+                      ),
                     ],
                   ),
                 ),

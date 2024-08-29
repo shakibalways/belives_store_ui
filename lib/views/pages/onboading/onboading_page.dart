@@ -1,9 +1,10 @@
+import 'package:belives_store/components/my_custom_text.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/utilits/constant/image_list.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
 import 'package:belives_store/views/pages/auth/sign_in_page/sign_in_page.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
@@ -15,37 +16,34 @@ class OnboardingPage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset(
-              RImages.onboardingImage,
-            ),
-            const SizedBox(
-              height: 50,
-            ),
+            Image.asset(RImages.onboardingImage),
+            const SizedBox(height: 50),
             //Content && Subcontent
-            const Text(
-              RTexts.content,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            const MyCustomText(
+              title: RTexts.content,
+              fSize: 20,
+              fWeight: FontWeight.bold,
             ),
-            const Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(
-                RTexts.subContent,
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16),
-              ),
+            const SizedBox(height: 15,),
+            const MyCustomText(
+              title: RTexts.subContent,
+              tAlign: TextAlign.center,
+              fSize: 16,
+              mLines: 2,
             ),
-            const SizedBox(
-              height: 50,
-            ),
+            const SizedBox(height: 80),
             //CustomButton
             GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignInPage()));
-
+              onTap: () {
+                Get.to(() => const SignInPage());
               },
-              child: const CustomContainer(
-                  title: RTexts.buttonText, icon: Icons.arrow_forward_rounded),
-            )
+              child: const Padding(
+                padding: EdgeInsets.only(left: 25, right: 25),
+                child: CustomContainer(
+                    title: RTexts.buttonText,
+                    icon: Icons.arrow_forward_rounded),
+              ),
+            ),
           ],
         ),
       ),
