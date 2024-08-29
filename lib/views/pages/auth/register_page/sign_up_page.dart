@@ -1,3 +1,4 @@
+import 'package:belives_store/components/my_custom_text.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/global_wieght/custom_field.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
@@ -21,20 +22,21 @@ class _SignUpPageState extends State<SignUpPage> {
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  MyCustomText(title: RTexts.getting,fSize: 25,fWeight: FontWeight.bold,),
+                  MyCustomText(title: RTexts.sub,fSize: 15,color: Colors.black87,)
+
+                ],
+              ),
               // Form List
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  RTexts.getting,
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                ),
-                const Text(
-                  RTexts.sub,
-                  style: TextStyle(color: Colors.black87),
-                ),
                 CustomField(
                     controller: gmailController,
                     hintText: 'shakibmohammad18@gmail.com',
