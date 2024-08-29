@@ -14,6 +14,7 @@ static const String sub='Create an account to continue!';
 static const String otpText ="OTP Authentication";
 static const String otpSub ="An authentication code has been \nsent to (+880) 01779257977";
 
+static const String subTitles= "A wireless speaker with a dynamic acoustic \nperformance designed to be positioned up \nagainst the wall on a shelf or side table in your \nhome. Impressive sound compared to its size.";
 
 
 // Home Page Text List

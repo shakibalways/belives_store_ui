@@ -1,5 +1,7 @@
 import 'package:belives_store/components/my_custom_container.dart';
+import 'package:belives_store/components/my_custom_text.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
+import 'package:belives_store/utilits/constant/text_list.dart';
 
 import 'package:flutter/material.dart';
 
@@ -29,6 +31,7 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
       }
     });
   }
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -60,16 +63,15 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Speakers",
-                    style: TextStyle(color: Colors.grey),
+                  MyCustomText(
+                    title: "Speakers",
+                    color: Colors.grey,
+                    fSize: 15,
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "Beosound \nBalance",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  SizedBox(height: 5),
+                  MyCustomText(
+                    title: "Beosound Balance",
+                    fWeight: FontWeight.w700,
                   ),
                 ],
               ),
@@ -79,32 +81,31 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "From",
-                    style: TextStyle(color: Colors.grey),
+                  MyCustomText(
+                    title: "From",
+                    color: Colors.grey,
+                    fSize: 15,
                   ),
-                  Text(
-                    "\$1,600",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
+                  MyCustomText(
+                    title: "\$1,600",
+                    fSize: 15,
+                    fWeight: FontWeight.bold,
+                  )
                 ],
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    "Available Color",
-                    style: TextStyle(color: Colors.grey),
+                  const MyCustomText(
+                    title: "Available color",
+                    color: Colors.grey,
+                    fSize: 15,
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                   SizedBox(
                     height: 40,
                     child: ListView.builder(
@@ -134,9 +135,7 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 40,
-            ),
+            const SizedBox(height: 40),
             //Description
             Stack(
               clipBehavior: Clip.none,
@@ -156,21 +155,20 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
                       children: [
                         Column(
                           children: [
-                            Text(
-                              "Wireless, smart home speaker",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 22),
+                            MyCustomText(
+                              title: "Wireless, smart home speaker",
+                              fWeight: FontWeight.bold,
+                              fSize: 22,
                             ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Text(
-                                "A wireless speaker with a dynamic acoustic \nperformance designed to be positioned up \nagainst the wall on a shelf or side table in your \nhome. Impressive sound compared to its size."),
+                            SizedBox(height: 20),
+                            MyCustomText(
+                              title: RTexts.subTitles,
+                              mLines: 4,
+                              fSize: 15,
+                            )
                           ],
                         ),
-                        CustomContainer(
-                          title: 'ADD TO CART',
-                        )
+                        CustomContainer(title: 'ADD TO CART')
                       ],
                     ),
                   ),
