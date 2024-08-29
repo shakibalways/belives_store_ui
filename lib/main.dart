@@ -1,4 +1,4 @@
-import 'package:belives_store/views/pages/user_profile/user_profile.dart';
+import 'package:belives_store/views/pages/single_product_view/single_product_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UserProfilePage(),
+      home: SingleProductViewPage(),
     );
   }
 }

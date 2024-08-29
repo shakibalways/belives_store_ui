@@ -7,6 +7,7 @@ class MyCustomText extends StatelessWidget {
   final double? fSize;
   final TextAlign? tAlign;
   final int? mLines;
+  final TextOverflow? tOverflow;
 
   const MyCustomText({
     super.key,
@@ -16,6 +17,7 @@ class MyCustomText extends StatelessWidget {
     this.fSize,
     this.tAlign,
     this.mLines,
+    this.tOverflow,
   });
 
   @override
@@ -24,6 +26,7 @@ class MyCustomText extends StatelessWidget {
       title,
       textAlign: tAlign ?? TextAlign.start,
       maxLines: mLines ?? 1,
+      overflow: tOverflow,
       style: TextStyle(
         color: color ?? Colors.black,
         fontWeight: fWeight ?? FontWeight.normal,

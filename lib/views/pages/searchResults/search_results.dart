@@ -1,6 +1,6 @@
+import 'package:belives_store/global_wieght/conatiner_custom.dart';
+import 'package:belives_store/global_wieght/custom_divider.dart';
 import 'package:flutter/material.dart';
-import '../../../global_wieght/conatiner_custom.dart';
-import '../../../global_wieght/custom_divider.dart';
 
 class SearchResultPage extends StatefulWidget {
   const SearchResultPage({super.key});
@@ -71,16 +71,15 @@ class _SearchResultPageState extends State<SearchResultPage> {
   void searchUser(String name) {
     myList = productItem
         .where((element) => element
-        .toString()
-        .toLowerCase()
-        .contains(name.toString().toLowerCase()))
+            .toString()
+            .toLowerCase()
+            .contains(name.toString().toLowerCase()))
         .toList();
     setState(() {});
   }
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     myList = productItem;
   }
@@ -105,13 +104,13 @@ class _SearchResultPageState extends State<SearchResultPage> {
                         hintText: "Search",
                         suffixIcon: searchController.text.isNotEmpty
                             ? InkWell(
-                            onTap: () {
-                              setState(() {
-                                searchController.clear();
-                                myList = productItem;
-                              });
-                            },
-                            child: const Icon(Icons.close))
+                                onTap: () {
+                                  setState(() {
+                                    searchController.clear();
+                                    myList = productItem;
+                                  });
+                                },
+                                child: const Icon(Icons.close))
                             : const Icon(Icons.search),
                         border: OutlineInputBorder(
                           borderSide: BorderSide.none,
@@ -138,22 +137,23 @@ class _SearchResultPageState extends State<SearchResultPage> {
                 ),
                 myList.isNotEmpty
                     ? GridView.builder(
-                    padding: const EdgeInsets.all(10),
-                    shrinkWrap: true,
-                    itemCount: myList.length,
-                    physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate:
-                    const SliverGridDelegateWithFixedCrossAxisCount(
-                        childAspectRatio: 0.7,
-                        crossAxisCount: 2,
-                        mainAxisSpacing: 20,
-                        crossAxisSpacing: 20),
-                    itemBuilder: (context, index) {
-                      return ContainerCustom(
-                          image: myList[index]["image"],
-                          itemName: myList[index]["itemName"],
-                          itemPrice: myList[index]["itemPrice"]);
-                    })
+                        padding: const EdgeInsets.all(10),
+                        shrinkWrap: true,
+                        itemCount: myList.length,
+                        physics: const NeverScrollableScrollPhysics(),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          childAspectRatio: 0.7,
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 20,
+                          crossAxisSpacing: 20,
+                        ),
+                        itemBuilder: (context, index) {
+                          return ContainerCustom(
+                              image: myList[index]["image"],
+                              itemName: myList[index]["itemName"],
+                              itemPrice: myList[index]["itemPrice"]);
+                        })
                     : const Text("Data Not Found"),
               ],
             ),

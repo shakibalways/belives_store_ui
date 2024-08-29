@@ -1,4 +1,4 @@
-
+import 'package:belives_store/components/my_custom_container.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
 
 import 'package:flutter/material.dart';
@@ -46,7 +46,7 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
           Icon(
             Icons.shopping_bag,
             size: 40,
-          )
+          ),
         ],
       ),
       //Info
@@ -109,57 +109,29 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
                   SizedBox(
                     height: 40,
                     child: ListView.builder(
-                        shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                        primary: false,
-                        itemCount: mycolors.length,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                selectItem(index);
-                              });
-                            },
-                            child: Container(
-                              margin: const EdgeInsets.only(right: 5),
-                              width: 40,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: selectedColorIndex == index
-                                    ? mycolors[index]
-                                    : Colors.grey,
-                              ),
-                            ),
-                          );
-                        }),
-                  )
-                  // Row(
-                  //   children: [
-                  //     Container(
-                  //       height: 40,
-                  //       width: 40,
-                  //       decoration: BoxDecoration(
-                  //           borderRadius: BorderRadius.circular(10),
-                  //           color: const Color(0xffC6AB59)),
-                  //     ),
-                  //     const SizedBox(width: 10),
-                  //     Container(
-                  //       height: 40,
-                  //       width: 40,
-                  //       decoration: BoxDecoration(
-                  //           borderRadius: BorderRadius.circular(10),
-                  //           color: const Color(0xffF8B6C3)),
-                  //     ),
-                  //     const SizedBox(width: 10),
-                  //     Container(
-                  //       height: 40,
-                  //       width: 40,
-                  //       decoration: BoxDecoration(
-                  //           borderRadius: BorderRadius.circular(10),
-                  //           color: const Color(0xff171717)),
-                  //     ),
-                  //   ],
-                  // ),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      primary: false,
+                      itemCount: mycolors.length,
+                      itemBuilder: (context, index) {
+                        return GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selectItem(index);
+                            });
+                          },
+                          child: MyCustomContainer(
+                            margin: const EdgeInsets.only(right: 5),
+                            width: 40,
+                            bRadius: BorderRadius.circular(10),
+                            color: selectedColorIndex == index
+                                ? mycolors[index]
+                                : Colors.grey,
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -167,50 +139,54 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
               height: 40,
             ),
             //Description
-            Stack(clipBehavior: Clip.none, children: [
-              Container(
-                height: height * .52,
-                width: width,
-                decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(20),
-                        topLeft: Radius.circular(20))),
-                child: const Padding(
-                  padding: EdgeInsets.all(30),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            "Wireless, smart home speaker",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 22),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Text(
-                              "A wireless speaker with a dynamic acoustic \nperformance designed to be positioned up \nagainst the wall on a shelf or side table in your \nhome. Impressive sound compared to its size."),
-                        ],
-                      ),
-                      CustomContainer(
-                        title: 'ADD TO CART',
-                      )
-                    ],
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Container(
+                  height: height * .52,
+                  width: width,
+                  decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(20),
+                          topLeft: Radius.circular(20))),
+                  child: const Padding(
+                    padding: EdgeInsets.all(30),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              "Wireless, smart home speaker",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 22),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                                "A wireless speaker with a dynamic acoustic \nperformance designed to be positioned up \nagainst the wall on a shelf or side table in your \nhome. Impressive sound compared to its size."),
+                          ],
+                        ),
+                        CustomContainer(
+                          title: 'ADD TO CART',
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              Positioned(
+                Positioned(
                   left: 200,
                   bottom: 350,
                   child: Image.asset(
                     "assets/home_image/Base.png",
                     height: 450,
                     fit: BoxFit.fitHeight,
-                  )),
-            ]),
+                  ),
+                ),
+              ],
+            ),
             //Descreption
           ],
         ),
