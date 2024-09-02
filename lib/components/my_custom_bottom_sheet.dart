@@ -7,15 +7,19 @@ import 'my_custom_textfield.dart';
 class MyCustomBottomSheet extends StatelessWidget {
   final double height;
   final double width;
-  final MainAxisAlignment ? mAxisAli;
-  final List<Widget> children;
+  final MainAxisAlignment? mAxisAli;
+  final List<Widget>? children;
+  final List<Widget>? chill;
+  final Widget? child;
 
   const MyCustomBottomSheet({
     super.key,
     required this.height,
     required this.width,
     this.mAxisAli,
-    required this.children,
+    this.children,
+    this.chill,
+    this.child,
   });
 
   @override
@@ -38,54 +42,52 @@ class MyCustomBottomSheet extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(30),
                 child: Column(
-                  mainAxisAlignment:mAxisAli ?? MainAxisAlignment.start,
-                  children: [
-                    Column(
-                      children: [
-                        MyCustomSearchField(
-                          tName: "139 Haystreet,Perth",
-                          controller: searchController,
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        const CustomDivider(),
-                      ],
-                    ),
-                    const Column(
-                      children: [
-                        ListTile(
-                          leading: Icon(Icons.location_on_outlined),
-                          title: Text(
-                            "139 Haystreet ,Perth",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                  mainAxisAlignment: mAxisAli ?? MainAxisAlignment.start,
+                  children: children ??
+                      [
+                        Column(
+                          children: [
+                            MyCustomSearchField(
+                              tName: "139 Haystreet,Perth",
+                              controller: searchController,
                             ),
-                          ),
-                          trailing: Icon(
-                            Icons.add,
-                            size: 40,
-                            color: Color(0xff02C697),
-                          ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            const CustomDivider(),
+                          ],
+                        ),
+                        const Column(
+                          children: [
+                            ListTile(
+                              leading: Icon(Icons.location_on_outlined),
+                              title: Text(
+                                "139 Haystreet ,Perth",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              trailing: Icon(
+                                Icons.add,
+                                size: 40,
+                                color: Color(0xff02C697),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const CustomContainer(
+                          title: "CONTINUE TO PAYMENT",
+                          icon: Icons.arrow_right_alt,
                         ),
                       ],
-                    ),
-                    const CustomContainer(
-                      title: "CONTINUE TO PAYMENT",
-                      icon: Icons.arrow_right_alt,
-                    ),
-                  ],
                 ),
               ),
             );
           },
         );
       },
-      child: Image.asset(
-        "assets/map/location.png",
-        fit: BoxFit.cover,
-      ),
+      child: child,
     );
   }
 }
