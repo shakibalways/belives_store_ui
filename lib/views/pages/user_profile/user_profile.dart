@@ -1,8 +1,10 @@
+import 'package:belives_store/components/my_custom_bottom_sheet.dart';
 import 'package:belives_store/components/my_custom_container.dart';
 import 'package:belives_store/components/my_custom_text.dart';
+import 'package:belives_store/components/my_custom_textfield.dart';
 import 'package:belives_store/data%20model/productof_list.dart';
+import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/global_wieght/custom_divider.dart';
-import 'package:belives_store/views/pages/user_profile/widgets/my_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class UserProfilePage extends StatefulWidget {
@@ -14,6 +16,7 @@ class UserProfilePage extends StatefulWidget {
 
 class _UserProfilePageState extends State<UserProfilePage> {
   final TextEditingController codeController = TextEditingController();
+  final TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -138,18 +141,50 @@ class _UserProfilePageState extends State<UserProfilePage> {
                                 fSize: 14,
                                 fWeight: FontWeight.w300),
                             buildSizedBox(height: 30),
-                            GestureDetector(
-                              onTap: () {
-                                showModalBottomSheet(
-                                  context: context,
-                                  builder: (BuildContext context) {
-                                    return MyCustomBottomSheet(
-                                      controller: codeController,
-                                      bName: '"Apply Filters (4)"',
-                                    );
-                                  },
-                                );
-                              },
+                            MyCustomBottomSheets(
+                              height: height * .53,
+                              width: double.infinity,
+                              padding: const EdgeInsets.all(0),
+                              physics: const ScrollPhysics(),
+                              children: [
+                                MyCustomContainer(
+                                  margin: const EdgeInsets.only(top: 80),
+                                  height: height * 0.13,
+                                  width: width * 0.25,
+                                  color: const Color(0xffC6AB59),
+                                  bRadius: BorderRadius.circular(30),
+                                  child: Center(
+                                    child: Image.asset(
+                                      "assets/images/alarm.png",
+                                      height: 75,
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(height: 15),
+                                const MyCustomText(
+                                  title: "Tracking Order",
+                                  fWeight: FontWeight.bold,
+                                  fSize: 22,
+                                ),
+                                const SizedBox(height: 8),
+                                const Text(
+                                    "Enter up to 25 tracking numbers, one per line."),
+                                const SizedBox(height: 8),
+                                const CustomDivider(),
+                                Padding(
+                                  padding: const EdgeInsets.all(20),
+                                  child: MyCustomSearchField(
+                                    hintName: "Enter Code",
+                                    controller: searchController,
+                                  ),
+                                ),
+                                const SizedBox(height: 10),
+                                const Padding(
+                                  padding: EdgeInsets.all(20),
+                                  child:
+                                      CustomContainer(title: "Apply Filter(4)"),
+                                ),
+                              ],
                               child: MyCustomContainer(
                                 height: height * .05,
                                 width: width * .46,
@@ -202,6 +237,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
       ),
     );
   }
+
   SizedBox buildSizedBox({double? height, double? width}) => SizedBox(
         height: height,
         width: width,

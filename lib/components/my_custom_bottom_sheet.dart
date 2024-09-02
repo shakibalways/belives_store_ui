@@ -4,27 +4,27 @@ import 'package:flutter/material.dart';
 
 import 'my_custom_textfield.dart';
 
-class MyCustomBottomSheet extends StatelessWidget {
+class MyCustomBottomSheets extends StatelessWidget {
   final double height;
   final double width;
   final MainAxisAlignment? mAxisAli;
-  final List<Widget>? children;
-  final List<Widget>? chill;
+  final List<Widget> children;
   final Widget? child;
+  final EdgeInsetsGeometry? padding;
+  final ScrollPhysics? physics;
 
-  const MyCustomBottomSheet({
+  const MyCustomBottomSheets({
     super.key,
     required this.height,
     required this.width,
     this.mAxisAli,
-    this.children,
-    this.chill,
+    required this.children,
     this.child,
+    this.padding, this.physics,
   });
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController searchController = TextEditingController();
     return GestureDetector(
       onTap: () {
         showModalBottomSheet(
@@ -40,46 +40,13 @@ class MyCustomBottomSheet extends StatelessWidget {
                     topRight: Radius.circular(10),
                   )),
               child: Padding(
-                padding: const EdgeInsets.all(30),
-                child: Column(
-                  mainAxisAlignment: mAxisAli ?? MainAxisAlignment.start,
-                  children: children ??[
-                        Column(
-                          children: [
-                            MyCustomSearchField(
-                              tName: "139 Haystreet,Perth",
-                              controller: searchController,
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            const CustomDivider(),
-                          ],
-                        ),
-                        const Column(
-                          children: [
-                            ListTile(
-                              leading: Icon(Icons.location_on_outlined),
-                              title: Text(
-                                "139 Haystreet ,Perth",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-                              trailing: Icon(
-                                Icons.add,
-                                size: 40,
-                                color: Color(0xff02C697),
-                              ),
-                            ),
-                          ],
-                        ),
-                        const CustomContainer(
-                          title: "CONTINUE TO PAYMENT",
-                          icon: Icons.arrow_right_alt,
-                        ),
-                      ],
+                padding: padding ?? const EdgeInsets.all(30),
+                child: SingleChildScrollView(
+                  physics: physics,
+                  child: Column(
+                    mainAxisAlignment: mAxisAli ?? MainAxisAlignment.start,
+                    children: children,
+                  ),
                 ),
               ),
             );
