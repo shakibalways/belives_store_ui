@@ -63,7 +63,7 @@ class ShippingNewAddressPage extends StatelessWidget {
                                 children: [
                                    MyCustomListTile(
                                     leading: Icon(Icons.location_on_outlined),
-                                    tText: "139 Haystreet ,Perthss",
+                                    tText: "139 Haystreet ,Perth",
                                     fWeight: FontWeight.bold,
                                     fSize: 18,
                                     trailing: Icon(

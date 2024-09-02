@@ -34,7 +34,7 @@ class MyCustomListTile extends StatelessWidget {
       leading: leading ?? Icon(lIcon),
       title: title ??
           Text(
-            tText!,
+            tText ?? "",
             style: TextStyle(
               fontWeight: fWeight ?? FontWeight.normal,
               fontSize: fSize,
@@ -43,7 +43,7 @@ class MyCustomListTile extends StatelessWidget {
           ),
       subtitle: subTitle ??
           Text(
-            subT!,
+            subT ?? "",
             style: TextStyle(
               fontWeight: fWeight ?? FontWeight.normal,
             ),
