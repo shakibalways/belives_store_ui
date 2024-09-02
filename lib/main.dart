@@ -1,5 +1,4 @@
 import 'package:belives_store/views/pages/shipping_new_address/shipping_new_address.dart';
-import 'package:belives_store/views/pages/single_product_view/single_product_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

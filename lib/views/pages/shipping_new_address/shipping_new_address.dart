@@ -1,3 +1,4 @@
+import 'package:belives_store/components/my_custom_list_tile.dart';
 import 'package:belives_store/components/my_custom_textfield.dart';
 import 'package:belives_store/global_wieght/custom_appbar.dart';
 
@@ -60,15 +61,11 @@ class ShippingNewAddressPage extends StatelessWidget {
                               ),
                               const Column(
                                 children: [
-                                  ListTile(
+                                   MyCustomListTile(
                                     leading: Icon(Icons.location_on_outlined),
-                                    title: Text(
-                                      "139 Haystreet ,Perth",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                      ),
-                                    ),
+                                    tText: "139 Haystreet ,Perthss",
+                                    fWeight: FontWeight.bold,
+                                    fSize: 18,
                                     trailing: Icon(
                                       Icons.add,
                                       size: 40,
@@ -77,6 +74,7 @@ class ShippingNewAddressPage extends StatelessWidget {
                                   ),
                                 ],
                               ),
+
                               const CustomContainer(
                                 title: "CONTINUE TO PAYMENT",
                                 icon: Icons.arrow_right_alt,

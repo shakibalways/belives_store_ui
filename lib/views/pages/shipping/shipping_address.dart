@@ -1,3 +1,4 @@
+import 'package:belives_store/components/my_custom_list_tile.dart';
 import 'package:belives_store/global_wieght/custom_appbar.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/global_wieght/custom_divider.dart';
@@ -13,9 +14,9 @@ class ShippingAddressPage extends StatelessWidget {
     return Scaffold(
       appBar: customappBar(
           title: const Text(
-            "SHIPPING",
-            style: TextStyle(fontSize: 16),
-          )),
+        "SHIPPING",
+        style: TextStyle(fontSize: 16),
+      )),
       body: SingleChildScrollView(
         child: SizedBox(
             height: height * 1,
@@ -47,12 +48,12 @@ class ShippingAddressPage extends StatelessWidget {
                                         decoration: InputDecoration(
                                             hintText: "Enter Your Address",
                                             suffixIcon:
-                                            const Icon(Icons.search),
+                                                const Icon(Icons.search),
                                             filled: true,
                                             hoverColor: const Color(0xfff2f2f2),
                                             border: OutlineInputBorder(
                                                 borderRadius:
-                                                BorderRadius.circular(10),
+                                                    BorderRadius.circular(10),
                                                 borderSide: BorderSide.none)),
                                       ),
                                     ),
@@ -93,6 +94,7 @@ class ShippingAddressPage extends StatelessWidget {
                                         color: Color(0xff02C697),
                                       ),
                                     ),
+
                                     SizedBox(
                                       height: 10,
                                     ),
@@ -100,24 +102,7 @@ class ShippingAddressPage extends StatelessWidget {
                                     SizedBox(
                                       height: 10,
                                     ),
-                                    ListTile(
-                                      leading: Icon(Icons.location_on_sharp),
-                                      title: Text(
-                                        "Perth",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
-                                      ),
-                                      subtitle: Text(
-                                        "Apple Perth city",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w400),
-                                      ),
-                                      trailing: Icon(
-                                        Icons.check_circle_outline,
-                                        size: 40,
-                                      ),
-                                    ),
+                                    // MyCustomListTile(),
                                     SizedBox(
                                       height: 10,
                                     ),

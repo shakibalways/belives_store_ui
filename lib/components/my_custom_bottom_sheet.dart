@@ -43,8 +43,7 @@ class MyCustomBottomSheet extends StatelessWidget {
                 padding: const EdgeInsets.all(30),
                 child: Column(
                   mainAxisAlignment: mAxisAli ?? MainAxisAlignment.start,
-                  children: children ??
-                      [
+                  children: children ??[
                         Column(
                           children: [
                             MyCustomSearchField(
