@@ -1,4 +1,3 @@
-import 'package:belives_store/components/my_custom_list_tile.dart';
 import 'package:belives_store/global_wieght/custom_appbar.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/global_wieght/custom_divider.dart';
