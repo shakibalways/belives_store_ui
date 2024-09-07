@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../utilits/constant/color_list.dart';
 
 class CustomContainer extends StatelessWidget {
-  final double ? width;
+  final double? width;
   final String title;
   final IconData? icon;
   final double? color;
@@ -22,8 +22,7 @@ class CustomContainer extends StatelessWidget {
       height: 50,
       width: double.infinity,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: RColors.buttonColor),
+          borderRadius: BorderRadius.circular(10), color: RColors.buttonColor),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [

@@ -25,12 +25,17 @@ class OnboardingPage extends StatelessWidget {
               fSize: 20,
               fWeight: FontWeight.bold,
             ),
-            const SizedBox(height: 15,),
-            const MyCustomText(
-              title: RTexts.subContent,
-              tAlign: TextAlign.center,
-              fSize: 16,
-              mLines: 2,
+            const SizedBox(
+              height: 15,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: MyCustomText(
+                title: RTexts.subContent,
+                tAlign: TextAlign.center,
+                fSize: 16,
+                mLines: 2,
+              ),
             ),
             const SizedBox(height: 80),
             //CustomButton

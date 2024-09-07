@@ -2,7 +2,7 @@ class RTexts {
   // Onboarding title subtitle button text icon
   static const String content = "Welcome to STStore !";
   static const String subContent =
-      "With long experience in the audio industry,\nwe create the best quality products";
+      "With long experience in the audio industry,we create the best quality products";
   static const String buttonText = 'GET STARTED';
   //Sign In Page Text
 static const String title ='Let’s Sign You In';
