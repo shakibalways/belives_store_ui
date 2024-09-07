@@ -8,6 +8,7 @@ class SearchResultPage extends StatefulWidget {
   @override
   State<SearchResultPage> createState() => _SearchResultPageState();
 }
+
 class _SearchResultPageState extends State<SearchResultPage> {
   TextEditingController searchController = TextEditingController();
   List<Map<String, dynamic>> productItem = [
