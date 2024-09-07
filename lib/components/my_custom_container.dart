@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MyCustomContainer extends StatelessWidget {
-  final double? height;
-  final double width;
-  final Color? color;
-  final Widget? child;
-  final EdgeInsetsGeometry? margin;
-  final BorderRadiusGeometry? bRadius;
-
   const MyCustomContainer(
       {super.key,
       this.height,
@@ -15,7 +8,17 @@ class MyCustomContainer extends StatelessWidget {
       this.color,
       this.child,
       this.margin,
-      this.bRadius});
+      this.bRadius,
+      this.title,
+      this.icon});
+  final double? height;
+  final double width;
+  final Color? color;
+  final Widget? child;
+  final EdgeInsetsGeometry? margin;
+  final BorderRadiusGeometry? bRadius;
+  final String? title;
+  final IconData? icon;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +29,22 @@ class MyCustomContainer extends StatelessWidget {
         color: color,
         borderRadius: bRadius,
       ),
-      child: child,
+      child: child ??
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              const SizedBox(),
+              Text(
+                title ?? "",
+                style: const TextStyle(color: Colors.white),
+              ),
+              Icon(
+                icon,
+                color: Colors.white,
+                size: 35,
+              ),
+            ],
+          ),
     );
   }
 }

@@ -92,7 +92,8 @@ class _SignInPageState extends State<SignInPage> {
                   ],
                 ),
                 const SizedBox(height: 80),
-                const MyFacebookConnectContainer(title: "Connect with facebook"),
+                const MyFacebookConnectContainer(
+                    title: "Connect with facebook"),
               ],
             ),
           ],

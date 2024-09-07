@@ -26,7 +26,7 @@ class MyCustomText extends StatelessWidget {
       title,
       textAlign: tAlign ?? TextAlign.start,
       maxLines: mLines ?? 1,
-      overflow: tOverflow,
+      overflow: tOverflow ?? TextOverflow.ellipsis,
       style: TextStyle(
         color: color ?? Colors.black,
         fontWeight: fWeight ?? FontWeight.normal,
