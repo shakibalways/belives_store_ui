@@ -14,42 +14,45 @@ class OnboardingPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset(RImages.onboardingImage),
-            const SizedBox(height: 50),
             //Content && Subcontent
+            const Column(
+              children: [
+                MyCustomText(
+                  title: RTexts.content,
+                  fSize: 20,
+                  fWeight: FontWeight.bold,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  child: MyCustomText(
+                    title: RTexts.subContent,
+                    tAlign: TextAlign.center,
+                    fSize: 16,
+                    mLines: 2,
+                  ),
+                ),
+              ],
+            ),
 
-            const MyCustomText(
-              title: RTexts.content,
-              fSize: 20,
-              fWeight: FontWeight.bold,
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: MyCustomText(
-                title: RTexts.subContent,
-                tAlign: TextAlign.center,
-                fSize: 16,
-                mLines: 2,
-              ),
-            ),
-            const SizedBox(height: 80),
+            // const SizedBox(height: 80),
             //CustomButton
             GestureDetector(
               onTap: () {
                 Get.to(() => const SignInPage());
               },
               child: const Padding(
-                  padding: EdgeInsets.only(left: 25, right: 25),
-                  child: MyCustomButton(
-                    title: RTexts.wButtonText,
-                    icon: Icons.arrow_forward,
-                  ),
-                  ),
+                padding: EdgeInsets.only(left: 25, right: 25),
+                child: MyCustomButton(
+                  title: RTexts.wButtonText,
+                  icon: Icons.arrow_forward,
+                ),
+              ),
             ),
           ],
         ),
