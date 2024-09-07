@@ -1,7 +1,6 @@
 import 'package:belives_store/global_wieght/custom_field.dart';
 import 'package:flutter/material.dart';
 
-
 class AddNewCardPage extends StatefulWidget {
   const AddNewCardPage({super.key});
 

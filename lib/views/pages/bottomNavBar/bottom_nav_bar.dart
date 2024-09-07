@@ -15,7 +15,6 @@ class BottomNavBarPage extends StatefulWidget {
 class _BottomNavBarPageState extends State<BottomNavBarPage> {
   int currentIndex = 0;
 
-
   List<Widget> pages = [
     const SearchResultPage(),
     const SearchPage(),
@@ -25,14 +24,14 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GNav(
             selectedIndex: currentIndex,
-            onTabChange: (index){
+            onTabChange: (index) {
               setState(() {
-                currentIndex=index;
+                currentIndex = index;
               });
             },
             gap: 8,
