@@ -44,7 +44,7 @@ class OnboardingPage extends StatelessWidget {
             //CustomButton
             GestureDetector(
               onTap: () {
-                Get.to(() => const SignInPage());
+                Get.offAll(() => const SignInPage());
               },
               child: const Padding(
                 padding: EdgeInsets.only(left: 25, right: 25),

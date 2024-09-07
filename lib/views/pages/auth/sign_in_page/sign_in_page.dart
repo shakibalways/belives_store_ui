@@ -1,9 +1,10 @@
+import 'package:belives_store/components/my_custom_container.dart';
 import 'package:belives_store/components/my_custom_text.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
+import 'package:belives_store/utilits/constant/color_list.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
 import 'package:belives_store/views/pages/auth/register_page/sign_up_page.dart';
 import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_email_field.dart';
-import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_facebook_container.dart';
 import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_password_field.dart';
 import 'package:belives_store/views/pages/searchResults/search_results.dart';
 import 'package:flutter/material.dart';
@@ -92,8 +93,22 @@ class _SignInPageState extends State<SignInPage> {
                   ],
                 ),
                 const SizedBox(height: 80),
-                const MyFacebookConnectContainer(
-                    title: "Connect with facebook"),
+                // const MyFacebookConnectContainer(
+                //     title: "Connect with facebook"),
+                MyCustomButton(
+                  color: RColors.buttonColor1,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset('assets/images/fblogo.png'),
+                      const MyCustomText(
+                        title:"Connect with facebook" ,
+                        fSize: 15,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ],

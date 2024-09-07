@@ -27,7 +27,7 @@ class MyCustomButton extends StatelessWidget {
       height: height,
       width: width ?? double.infinity,
       decoration: BoxDecoration(
-        color: RColors.buttonColor,
+        color: color?? RColors.buttonColor,
         borderRadius: BorderRadius.circular(10),
       ),
       child: child ??
