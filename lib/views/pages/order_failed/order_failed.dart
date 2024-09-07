@@ -10,46 +10,50 @@ class OrderFailedPage extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: customappBar (title: const Text(
-        "ORDER FAILED",
-        style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
-      ),),
+      appBar: customappBar(
+        title: const Text(
+          "ORDER FAILED",
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Column(children: [
-              Container(
-                height: 110,
-                width: 110,
-                decoration: BoxDecoration(
-                  color: const Color(0xffF8B6C3),
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                child: Center(
-                  child: Image.asset(
-                    "assets/images/cancel.png",
-                    height: 75,
-                    color: Colors.black,
+            Column(
+              children: [
+                Container(
+                  height: 110,
+                  width: 110,
+                  decoration: BoxDecoration(
+                    color: const Color(0xffF8B6C3),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      "assets/images/cancel.png",
+                      height: 75,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const Text(
-                "Order Failed",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              const Text(
-                "Your payment occurred an error.",
-                style: TextStyle(color: Colors.grey),
-              ),
-            ],),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  "Order Failed",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Text(
+                  "Your payment occurred an error.",
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ],
+            ),
             const CustomDivider(),
             Column(
               children: [
@@ -60,8 +64,8 @@ class OrderFailedPage extends StatelessWidget {
                 ),
                 const Text(
                   "Keep calm, sometimes it happens"
-                      "\nPlease go back and check your payment method "
-                      "\nor contact us",
+                  "\nPlease go back and check your payment method "
+                  "\nor contact us",
                   style: TextStyle(color: Colors.grey),
                   textAlign: TextAlign.center,
                 ),
