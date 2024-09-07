@@ -94,7 +94,6 @@ class _SignUpPageState extends State<SignUpPage> {
                     ],
                   ),
                   const SizedBox(height: 60),
-                  // const MyFacebookConnectContainer(title: 'Connect with facebook',)
                   MyCustomButton(
                     color: RColors.buttonColor1,
                     child: Row(
