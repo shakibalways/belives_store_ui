@@ -1,8 +1,7 @@
+import 'package:belives_store/data%20model/order_list.dart';
 import 'package:belives_store/global_wieght/custom_appbar.dart';
 import 'package:belives_store/global_wieght/custom_divider.dart';
 import 'package:flutter/material.dart';
-
-import '../../../data model/order_list.dart';
 
 class PaymentSuccessfullyPage extends StatelessWidget {
   const PaymentSuccessfullyPage({super.key});
