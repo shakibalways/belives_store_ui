@@ -40,7 +40,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                       )),
                   child: Column(
                     children: [
-                      MyCustomContainer(
+                      MyCustomButton(
                         margin: const EdgeInsets.only(top: 80),
                         height: height * 0.12,
                         width: width * 0.25,
@@ -107,7 +107,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                                 itemBuilder: (context, index) {
                                   return Padding(
                                     padding: const EdgeInsets.all(10),
-                                    child: MyCustomContainer(
+                                    child: MyCustomButton(
                                       width: width * 0.22,
                                       color: const Color(0xffF3F6F8),
                                       bRadius: BorderRadius.circular(20),
@@ -147,7 +147,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                               padding: const EdgeInsets.all(0),
                               physics: const ScrollPhysics(),
                               children: [
-                                MyCustomContainer(
+                                MyCustomButton(
                                   margin: const EdgeInsets.only(top: 80),
                                   height: height * 0.13,
                                   width: width * 0.25,
@@ -185,7 +185,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                                       CustomContainer(title: "Apply Filter(4)"),
                                 ),
                               ],
-                              child: MyCustomContainer(
+                              child: MyCustomButton(
                                 height: height * .05,
                                 width: width * .46,
                                 color: const Color(0xffC6AB59),

@@ -119,7 +119,7 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
                               selectItem(index);
                             });
                           },
-                          child: MyCustomContainer(
+                          child: MyCustomButton(
                             margin: const EdgeInsets.only(right: 5),
                             width: 40,
                             bRadius: BorderRadius.circular(10),

@@ -1,5 +1,5 @@
+import 'package:belives_store/components/my_custom_container.dart';
 import 'package:belives_store/components/my_custom_text.dart';
-import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/utilits/constant/image_list.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
 import 'package:belives_store/views/pages/auth/sign_in_page/sign_in_page.dart';
@@ -44,13 +44,12 @@ class OnboardingPage extends StatelessWidget {
                 Get.to(() => const SignInPage());
               },
               child: const Padding(
-                padding: EdgeInsets.only(left: 25, right: 25),
-                child:
-                CustomContainer(
-                  title: RTexts.buttonText,
-                  icon: Icons.arrow_forward_rounded,
-                ),
-              ),
+                  padding: EdgeInsets.only(left: 25, right: 25),
+                  child: MyCustomButton(
+                    title: RTexts.wButtonText,
+                    icon: Icons.arrow_forward,
+                  ),
+                  ),
             ),
           ],
         ),

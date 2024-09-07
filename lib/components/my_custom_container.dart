@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MyCustomContainer extends StatelessWidget {
-  const MyCustomContainer(
+class MyCustomButton extends StatelessWidget {
+  const MyCustomButton(
       {super.key,
-      this.height,
-      required this.width,
+      this.height=50,
+        this.width,
       this.color,
       this.child,
       this.margin,
@@ -12,7 +12,7 @@ class MyCustomContainer extends StatelessWidget {
       this.title,
       this.icon});
   final double? height;
-  final double width;
+  final double? width;
   final Color? color;
   final Widget? child;
   final EdgeInsetsGeometry? margin;
@@ -24,7 +24,7 @@ class MyCustomContainer extends StatelessWidget {
     return Container(
       margin: margin,
       height: height,
-      width: width,
+      width: width ?? double.infinity,
       decoration: BoxDecoration(
         color: color,
         borderRadius: bRadius,

@@ -1,3 +1,4 @@
+import 'package:belives_store/views/pages/onboading/onboading_page.dart';
 import 'package:belives_store/views/pages/splash/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashPage(),
+      home: OnboardingPage(),
     );
   }
 }

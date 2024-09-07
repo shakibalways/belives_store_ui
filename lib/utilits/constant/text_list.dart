@@ -3,7 +3,7 @@ class RTexts {
   static const String content = "Welcome to STStore !";
   static const String subContent =
       "With long experience in the audio industry,we create the best quality products";
-  static const String buttonText = 'GET STARTED';
+  static const String wButtonText = 'GET STARTED';
   //Sign In Page Text
 static const String title ='Let’s Sign You In';
 static const String subTitle ='Welcome back, you’ve been missed!';
