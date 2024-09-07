@@ -11,10 +11,12 @@ class PaymentSuccessfullyPage extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: customappBar(title: const Text(
-        "ORDER COMPLETE",
-        style: TextStyle(fontSize: 16),
-      ),),
+      appBar: customappBar(
+        title: const Text(
+          "ORDER COMPLETE",
+          style: TextStyle(fontSize: 16),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -37,21 +39,29 @@ class PaymentSuccessfullyPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 const Text(
                   "Payment Successful!",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 const Text(
                   "Orders will arrive in 3 days!",
                   style: TextStyle(color: Colors.grey),
                 ),
               ],
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             const CustomDivider(),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             SizedBox(
               height: 170,
               child: ListView.builder(
@@ -77,7 +87,9 @@ class PaymentSuccessfullyPage extends StatelessWidget {
                     );
                   }),
             ),
-            const SizedBox(height: 25,),
+            const SizedBox(
+              height: 25,
+            ),
             Container(
               height: height * .07,
               width: width,
