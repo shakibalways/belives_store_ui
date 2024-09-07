@@ -1,9 +1,11 @@
 import 'package:belives_store/components/my_custom_container.dart';
 import 'package:belives_store/components/my_custom_text.dart';
+import 'package:belives_store/controller/getx/auth/signIn/sign_in.dart';
 import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/utilits/constant/color_list.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
 import 'package:belives_store/views/pages/auth/register_page/sign_up_page.dart';
+import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_custom_text_form_field.dart';
 import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_email_field.dart';
 import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_password_field.dart';
 import 'package:belives_store/views/pages/searchResults/search_results.dart';
@@ -24,6 +26,7 @@ class _SignInPageState extends State<SignInPage> {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SignInController());
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
@@ -52,6 +55,9 @@ class _SignInPageState extends State<SignInPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  MyCustomTextFormField(
+                    controller: controller.emailController,
+                  ),
                   MyEmailField(controller: nameController),
                   const SizedBox(height: 30),
                   MyPasswordField(controller: passController),
@@ -102,7 +108,7 @@ class _SignInPageState extends State<SignInPage> {
                     children: [
                       Image.asset('assets/images/fblogo.png'),
                       const MyCustomText(
-                        title:"Connect with facebook" ,
+                        title: "Connect with facebook",
                         fSize: 15,
                         color: Colors.white,
                       ),
