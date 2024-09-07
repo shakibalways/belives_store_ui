@@ -19,6 +19,7 @@ class OnboardingPage extends StatelessWidget {
             Image.asset(RImages.onboardingImage),
             const SizedBox(height: 50),
             //Content && Subcontent
+
             const MyCustomText(
               title: RTexts.content,
               fSize: 20,
