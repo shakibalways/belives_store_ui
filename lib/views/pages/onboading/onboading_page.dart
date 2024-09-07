@@ -45,9 +45,11 @@ class OnboardingPage extends StatelessWidget {
               },
               child: const Padding(
                 padding: EdgeInsets.only(left: 25, right: 25),
-                child: CustomContainer(
-                    title: RTexts.buttonText,
-                    icon: Icons.arrow_forward_rounded),
+                child:
+                CustomContainer(
+                  title: RTexts.buttonText,
+                  icon: Icons.arrow_forward_rounded,
+                ),
               ),
             ),
           ],

@@ -1,17 +1,13 @@
-
+import 'package:belives_store/controller/getx/uiController/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gradient_animation_text/flutter_gradient_animation_text.dart';
+import 'package:get/get.dart';
 
-class SplashPage extends StatefulWidget {
+class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
   @override
-  State<SplashPage> createState() => _SplashPageState();
-}
-
-class _SplashPageState extends State<SplashPage> {
-
-  @override
   Widget build(BuildContext context) {
+    Get.put(SplashController());
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
