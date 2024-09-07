@@ -1,4 +1,3 @@
-import 'package:belives_store/views/pages/shipping/shipping_address.dart';
 import 'package:belives_store/views/pages/user_profile/user_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

@@ -9,15 +9,15 @@ class MyListTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  ListTile(
-      leading: Icon(Icons.location_on_outlined),
+      leading: const Icon(Icons.location_on_outlined),
       title: Text(
        tText,
-        style: TextStyle(
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 18,
         ),
       ),
-      trailing: Icon(
+      trailing: const Icon(
         Icons.add,
         size: 40,
         color: Color(0xff02C697),
