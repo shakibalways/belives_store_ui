@@ -1,5 +1,5 @@
 import 'package:belives_store/views/pages/onboading/onboading_page.dart';
-import 'package:belives_store/views/pages/splash/splash.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
