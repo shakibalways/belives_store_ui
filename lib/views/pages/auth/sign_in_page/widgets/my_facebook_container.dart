@@ -14,8 +14,7 @@ class MyFacebookConnectContainer extends StatelessWidget {
     return Container(
       height: 50,
       decoration: BoxDecoration(
-          color: RColors.buttonColor1,
-          borderRadius: BorderRadius.circular(10)),
+          color: RColors.buttonColor1, borderRadius: BorderRadius.circular(10)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
