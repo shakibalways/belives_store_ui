@@ -32,7 +32,6 @@ class _SplashPageState extends State<SplashPage> {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Image.asset("assets/images/onboardingimage.png"),
-
           // Tranform Text
           const GradientAnimationText(
             text: Text(
