@@ -1,4 +1,3 @@
-
 import 'package:belives_store/global_wieght/conatiner_custom.dart';
 import 'package:belives_store/global_wieght/custom_divider.dart';
 import 'package:belives_store/utilits/constant/image_list.dart';
