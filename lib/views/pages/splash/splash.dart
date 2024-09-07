@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'package:belives_store/views/pages/onboading/onboading_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gradient_animation_text/flutter_gradient_animation_text.dart';
+import 'package:belives_store/views/pages/onboading/onboading_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -15,7 +15,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
     Timer(
       const Duration(seconds: 3),
-          () => Navigator.pushReplacement(
+      () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => const OnboardingPage(),
