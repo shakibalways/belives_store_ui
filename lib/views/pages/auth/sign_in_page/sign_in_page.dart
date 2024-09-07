@@ -1,14 +1,12 @@
-import 'package:belives_store/components/my_custom_container.dart';
+import 'package:belives_store/components/custom_loading_button.dart';
+import 'package:belives_store/components/my_custom_button.dart';
 import 'package:belives_store/components/my_custom_text.dart';
 import 'package:belives_store/controller/getx/auth/signIn/sign_in.dart';
-import 'package:belives_store/global_wieght/custom_container.dart';
 import 'package:belives_store/utilits/constant/color_list.dart';
+import 'package:belives_store/utilits/constant/icon.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
 import 'package:belives_store/views/pages/auth/register_page/sign_up_page.dart';
 import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_custom_text_form_field.dart';
-import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_email_field.dart';
-import 'package:belives_store/views/pages/auth/sign_in_page/widgets/my_password_field.dart';
-import 'package:belives_store/views/pages/searchResults/search_results.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,10 +18,6 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
-  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController passController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(SignInController());
@@ -51,16 +45,34 @@ class _SignInPageState extends State<SignInPage> {
             ),
             // Form List
             Form(
-              key: formKey,
+              key: controller.formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   MyCustomTextFormField(
+                    validate: controller.emailValidate,
                     controller: controller.emailController,
+                    prefixIcon: const Icon(Icons.person_outline),
+                    hinText: "Enter Your Email",
                   ),
-                  MyEmailField(controller: nameController),
                   const SizedBox(height: 30),
-                  MyPasswordField(controller: passController),
+                  Obx(
+                    () => MyCustomTextFormField(
+                      validate: controller.passwordValidate,
+                      obscureText: controller.isVisibility.value,
+                      suffixWidget: GestureDetector(
+                          onTap: () {
+                            controller.toggleVisibility();
+                          },
+                          child: controller.isVisibility.value
+                              ? const Icon(Icons.visibility)
+                              : const Icon(Icons.visibility_off)),
+                      controller: controller.passwordController,
+                      lText: "Password",
+                      prefixIcon: Icon(Icons.key,
+                          size: 25, color: Colors.black.withOpacity(0.2)),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -68,12 +80,23 @@ class _SignInPageState extends State<SignInPage> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                InkWell(
-                  onTap: () {
-                    Get.to(() => const SearchResultPage());
-                  },
-                  child: const CustomContainer(
-                      title: 'SIGN IN', icon: Icons.arrow_circle_right_sharp),
+                Obx(
+                  () => controller.isLoading.value
+                      ? CustomLoadingButton(
+                          color: RColors.buttonColor,
+                          child: Image.asset(
+                            RIcons.loading,
+                            height: 40,
+                            width: 40,
+                          ),
+                        )
+                      : MyCustomButton(
+                          onTap: () async {
+                            await controller.getSubmit();
+                          },
+                          title: "SIGN IN",
+                          icon: Icons.arrow_circle_right_sharp,
+                        ),
                 ),
                 const SizedBox(height: 20),
                 Row(

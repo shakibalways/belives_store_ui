@@ -5,11 +5,13 @@ class CustomLoadingButton extends StatelessWidget {
   final double? height;
   final double? width;
   final Color? color;
+  final Widget? child;
   const CustomLoadingButton({
     super.key,
     this.height,
     this.width,
     required this.color,
+    this.child,
   });
 
   @override
@@ -19,15 +21,16 @@ class CustomLoadingButton extends StatelessWidget {
       child: Container(
         height: height ?? 50,
         width: width ?? double.infinity,
-        color: color ?? RColors.buttonColor,
         decoration: BoxDecoration(
+          color: color ?? RColors.buttonColor,
           borderRadius: BorderRadius.circular(10),
         ),
-        child: const Center(
-          child: CircularProgressIndicator(
-            backgroundColor: Colors.white,
-          ),
-        ),
+        child: child ??
+            const Center(
+              child: CircularProgressIndicator(
+                backgroundColor: Colors.white,
+              ),
+            ),
       ),
     );
   }

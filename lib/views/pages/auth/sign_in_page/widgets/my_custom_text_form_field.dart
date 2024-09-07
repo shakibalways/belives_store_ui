@@ -32,7 +32,7 @@ class MyCustomTextFormField extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         labelText: lText,
-        hintStyle: TextStyle(color: Colors.black.withOpacity(0.2)),
+        hintStyle: TextStyle(color: Colors.black.withOpacity(0.5)),
         suffixIcon: suffixWidget,
         prefixIcon: prefixIcon,
         hintText: hinText ?? "",
