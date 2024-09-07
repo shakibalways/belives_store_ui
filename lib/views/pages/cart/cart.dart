@@ -229,13 +229,14 @@ class CartPage extends StatelessWidget {
                     Text(
                       "\$ 9,800",
                       style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     )
                   ],
                 ),
                 SizedBox(
                   height: 50,
                 ),
+
                 CustomContainer(
                   title: "CHECKOUT",
                   icon: Icons.arrow_right_alt,
