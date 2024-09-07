@@ -1,10 +1,11 @@
+import 'package:belives_store/utilits/constant/color_list.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomButton extends StatelessWidget {
   const MyCustomButton(
       {super.key,
-      this.height=50,
-        this.width,
+      this.height = 50,
+      this.width,
       this.color,
       this.child,
       this.margin,
@@ -26,8 +27,8 @@ class MyCustomButton extends StatelessWidget {
       height: height,
       width: width ?? double.infinity,
       decoration: BoxDecoration(
-        color: color,
-        borderRadius: bRadius,
+        color: RColors.buttonColor,
+        borderRadius: BorderRadius.circular(10),
       ),
       child: child ??
           Row(
