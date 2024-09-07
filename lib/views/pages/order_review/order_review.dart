@@ -26,14 +26,16 @@ class _OrderReviewPageState extends State<OrderReviewPage> {
         padding: const EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
           children: [
             Column(
               children: [
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Products",style: TextStyle(fontWeight: FontWeight.bold),),
+                    Text(
+                      "Products",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     Icon(Icons.arrow_drop_down_circle_outlined)
                   ],
                 ),
@@ -69,14 +71,17 @@ class _OrderReviewPageState extends State<OrderReviewPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text("SHIPPING"),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Icon(Icons.pin_drop),
                     const Text(
                       "139 Haystreet,Perth",
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                     Container(
                       height: 30,
@@ -121,16 +126,23 @@ class _OrderReviewPageState extends State<OrderReviewPage> {
                     ],
                   ),
                 ),
-              ],),
+              ],
+            ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("PAYMENT",style: TextStyle(color: Colors.grey),),
-                const SizedBox(height: 10,),
+                const Text(
+                  "PAYMENT",
+                  style: TextStyle(color: Colors.grey),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
                 Container(
                   height: height * .06,
                   decoration: BoxDecoration(
-                      color: Colors.black, borderRadius: BorderRadius.circular(20)),
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -158,7 +170,9 @@ class _OrderReviewPageState extends State<OrderReviewPage> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 const CustomDivider(),
               ],
             ),
@@ -190,7 +204,9 @@ class _OrderReviewPageState extends State<OrderReviewPage> {
                     )
                   ],
                 ),
-                const SizedBox(height: 30,),
+                const SizedBox(
+                  height: 30,
+                ),
                 Container(
                   height: height * .07,
                   width: width,
