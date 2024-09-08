@@ -155,7 +155,7 @@ class _SearchResultPageState extends State<SearchResultPage> {
                             itemName: myList[index]["itemName"],
                             itemPrice: myList[index]["itemPrice"],
                           );
-                        })
+                        },)
                     : const Text("Data Not Found"),
               ],
             ),
