@@ -236,7 +236,6 @@ class CartPage extends StatelessWidget {
                 SizedBox(
                   height: 50,
                 ),
-
                 CustomContainer(
                   title: "CHECKOUT",
                   icon: Icons.arrow_right_alt,

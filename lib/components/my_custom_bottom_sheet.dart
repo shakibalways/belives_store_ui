@@ -16,7 +16,8 @@ class MyCustomBottomSheets extends StatelessWidget {
     this.mAxisAli,
     required this.children,
     this.child,
-    this.padding, this.physics,
+    this.padding,
+    this.physics,
   });
 
   @override

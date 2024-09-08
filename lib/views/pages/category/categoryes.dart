@@ -1,4 +1,3 @@
-
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -13,8 +12,8 @@ class CatagoriesPage extends StatefulWidget {
 
 class _CatagoriesPageState extends State<CatagoriesPage> {
   double value = 20;
-  int colorIndex =0;
-  List<String> boxColor=[
+  int colorIndex = 0;
+  List<String> boxColor = [
     "0xffC6AB59",
     "0xff02C697",
     "0xffF8B6C3",
@@ -62,22 +61,31 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text("Gender",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
-                                const SizedBox(height: 10,),
+                                const Text(
+                                  "Gender",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
                                       height: 60,
                                       width: 120,
                                       decoration: BoxDecoration(
                                           color: const Color(0xffC6AB59),
-                                          borderRadius: BorderRadius.circular(10)),
+                                          borderRadius:
+                                              BorderRadius.circular(10)),
                                       child: const Center(
                                         child: Text(
                                           "Men",
-                                          style:
-                                          TextStyle(fontWeight: FontWeight.bold),
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ),
                                     ),
@@ -86,12 +94,13 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                       width: 120,
                                       decoration: BoxDecoration(
                                           color: const Color(0xffF3F6F8),
-                                          borderRadius: BorderRadius.circular(10)),
+                                          borderRadius:
+                                              BorderRadius.circular(10)),
                                       child: const Center(
                                         child: Text(
                                           "Women",
-                                          style:
-                                          TextStyle(fontWeight: FontWeight.bold),
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ),
                                     ),
@@ -100,18 +109,21 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                       width: 120,
                                       decoration: BoxDecoration(
                                           color: const Color(0xffF3F6F8),
-                                          borderRadius: BorderRadius.circular(10)),
+                                          borderRadius:
+                                              BorderRadius.circular(10)),
                                       child: const Center(
                                         child: Text(
                                           "Both",
-                                          style:
-                                          TextStyle(fontWeight: FontWeight.bold),
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ),
                                     ),
                                   ],
                                 ),
-                                const SizedBox(height: 10,),
+                                const SizedBox(
+                                  height: 10,
+                                ),
                                 const CustomDivider(),
                               ],
                             ),
@@ -134,54 +146,59 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                       });
                                     }),
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
                                       height: 60,
                                       width: 190,
                                       decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                           color: const Color(0xffF3F6F8)),
                                       child: const Center(
                                           child: Row(
-                                            mainAxisAlignment:
+                                        mainAxisAlignment:
                                             MainAxisAlignment.spaceAround,
-                                            children: [
-                                              Text(
-                                                'Min',
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold),
-                                              ),
-                                              Icon(
-                                                Icons.minimize,
-                                                size: 35,
-                                              )
-                                            ],
-                                          )),
+                                        children: [
+                                          Text(
+                                            'Min',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          Icon(
+                                            Icons.minimize,
+                                            size: 35,
+                                          )
+                                        ],
+                                      )),
                                     ),
                                     Container(
                                       height: 60,
                                       width: 190,
                                       decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                           color: const Color(0xffF3F6F8)),
                                       child: const Center(
                                           child: Row(
-                                            mainAxisAlignment:
+                                        mainAxisAlignment:
                                             MainAxisAlignment.spaceAround,
-                                            children: [
-                                              Text(
-                                                'Max',
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold),
-                                              ),
-                                              Icon(Icons.add)
-                                            ],
-                                          )),
+                                        children: [
+                                          Text(
+                                            'Max',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          Icon(Icons.add)
+                                        ],
+                                      )),
                                     )
                                   ],
                                 ),
-                                const SizedBox(height: 20,),
+                                const SizedBox(
+                                  height: 20,
+                                ),
                                 const CustomDivider(),
                               ],
                             ),
@@ -191,7 +208,8 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                 const Text(
                                   "Color",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.bold, fontSize: 18),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 80,
@@ -203,26 +221,26 @@ class _CatagoriesPageState extends State<CatagoriesPage> {
                                         return Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: GestureDetector(
-                                            onTap: (){
+                                            onTap: () {
                                               setState(() {
-                                                colorIndex=colorIndex;
+                                                colorIndex = colorIndex;
                                                 log("yes");
                                               });
                                             },
                                             child: Container(
-
                                               width: 70,
                                               decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.circular(10),
-                                                  color:Color(int.parse(boxColor[index]))
-                                              ),
-
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  color: Color(int.parse(
+                                                      boxColor[index]))),
                                             ),
                                           ),
                                         );
                                       }),
                                 )
-                              ],)
+                              ],
+                            )
                           ],
                         ),
                       ),

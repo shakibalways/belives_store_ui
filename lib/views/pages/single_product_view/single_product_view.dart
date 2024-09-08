@@ -31,6 +31,7 @@ class _SingleProductViewPageState extends State<SingleProductViewPage> {
       }
     });
   }
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
