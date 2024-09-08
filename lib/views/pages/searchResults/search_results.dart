@@ -122,7 +122,6 @@ class _SearchResultPageState extends State<SearchResultPage> {
                 const SizedBox(
                   height: 20,
                 ),
-
                 const CustomDivider(),
                 const SizedBox(
                   height: 20,
@@ -150,12 +149,12 @@ class _SearchResultPageState extends State<SearchResultPage> {
                           mainAxisSpacing: 20,
                           crossAxisSpacing: 20,
                         ),
-
                         itemBuilder: (context, index) {
                           return ContainerCustom(
-                              image: myList[index]["image"],
-                              itemName: myList[index]["itemName"],
-                              itemPrice: myList[index]["itemPrice"],);
+                            image: myList[index]["image"],
+                            itemName: myList[index]["itemName"],
+                            itemPrice: myList[index]["itemPrice"],
+                          );
                         })
                     : const Text("Data Not Found"),
               ],
