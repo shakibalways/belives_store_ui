@@ -155,7 +155,7 @@ class _SearchResultPageState extends State<SearchResultPage> {
                           return ContainerCustom(
                               image: myList[index]["image"],
                               itemName: myList[index]["itemName"],
-                              itemPrice: myList[index]["itemPrice"]);
+                              itemPrice: myList[index]["itemPrice"],);
                         })
                     : const Text("Data Not Found"),
               ],
