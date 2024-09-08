@@ -30,7 +30,7 @@ class _SearchPageState extends State<SearchPage> {
                     border: OutlineInputBorder(
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(10),
-                    )),
+                    ),),
               ),
             ),
             const CustomDivider(
@@ -78,7 +78,6 @@ class _SearchPageState extends State<SearchPage> {
             ),
             //Recent Searches
 
-
             //Popular Searches
             const Column(
               children: [
@@ -109,7 +108,6 @@ class _SearchPageState extends State<SearchPage> {
               ],
             ),
             //Popular Searches
-
           ],
         ),
       ),
