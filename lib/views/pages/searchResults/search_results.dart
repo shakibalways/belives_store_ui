@@ -122,6 +122,7 @@ class _SearchResultPageState extends State<SearchResultPage> {
                 const SizedBox(
                   height: 20,
                 ),
+
                 const CustomDivider(),
                 const SizedBox(
                   height: 20,
