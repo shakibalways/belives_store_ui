@@ -150,6 +150,7 @@ class _SearchResultPageState extends State<SearchResultPage> {
                           mainAxisSpacing: 20,
                           crossAxisSpacing: 20,
                         ),
+
                         itemBuilder: (context, index) {
                           return ContainerCustom(
                               image: myList[index]["image"],
