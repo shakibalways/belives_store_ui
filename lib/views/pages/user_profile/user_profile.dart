@@ -57,6 +57,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                           ),
                         ),
                       ),
+
                       buildSizedBox(height: 20),
                       const MyCustomText(
                           title: "SHAKIB", fSize: 25, fWeight: FontWeight.bold),
