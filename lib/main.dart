@@ -1,5 +1,4 @@
-import 'package:belives_store/views/pages/auth/sign_in_page/sign_in_page.dart';
-import 'package:belives_store/views/pages/onboading/onboading_page.dart';
+
 import 'package:belives_store/views/pages/splash/splash.dart';
 
 import 'package:flutter/material.dart';
