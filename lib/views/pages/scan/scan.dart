@@ -1,6 +1,3 @@
-
-
-
 import 'package:belives_store/utilits/constant/image_list.dart';
 import 'package:flutter/material.dart';
 
