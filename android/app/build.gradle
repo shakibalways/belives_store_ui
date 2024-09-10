@@ -56,6 +56,9 @@ android {
             // TODO: Add your own sign_in_pageg config for the release build.
             // sign_in_page with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
