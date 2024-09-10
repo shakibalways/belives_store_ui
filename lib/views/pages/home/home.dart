@@ -17,12 +17,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   leading: const Icon(
-      //     Icons.menu_open_sharp,
-      //     size: 32,
-      //   ),
-      // ),
+
       appBar: customappBar(
           leading: const Icon(Icons.menu_open_sharp,size: 32,)
       ),
