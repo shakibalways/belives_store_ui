@@ -1,7 +1,8 @@
 import 'dart:developer';
 
+import 'package:belives_store/global_wieght/custom_divider.dart';
 import 'package:flutter/material.dart';
-import '../../../global_wieght/custom_divider.dart';
+
 
 class CatagoriesPage extends StatefulWidget {
   const CatagoriesPage({super.key});
