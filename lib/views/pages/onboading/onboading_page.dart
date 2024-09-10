@@ -40,7 +40,6 @@ class OnboardingPage extends StatelessWidget {
               ],
             ),
 
-            // const SizedBox(height: 80),
             //CustomButton
             GestureDetector(
               onTap: () {
