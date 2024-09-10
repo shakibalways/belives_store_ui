@@ -1,4 +1,4 @@
-import 'package:belives_store/data%20model/productof_list.dart';
+import'package:belives_store/data%20model/productof_list.dart';
 import 'package:belives_store/global_wieght/custom_card.dart';
 
 import 'package:flutter/material.dart';
