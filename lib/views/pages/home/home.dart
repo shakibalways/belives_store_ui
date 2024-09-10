@@ -1,9 +1,10 @@
 import'package:belives_store/data%20model/productof_list.dart';
+import 'package:belives_store/global_wieght/custom_appbar.dart';
 import 'package:belives_store/global_wieght/custom_card.dart';
 import 'package:belives_store/utilits/constant/text_list.dart';
 
 import 'package:flutter/material.dart';
-import '../../../global_wieght/custom_appbar.dart';
+
 
 
 
