@@ -170,7 +170,6 @@ class _OrderReviewPageState extends State<OrderReviewPage> {
                     ],
                   ),
                 ),
-
                 const SizedBox(
                   height: 10,
                 ),
