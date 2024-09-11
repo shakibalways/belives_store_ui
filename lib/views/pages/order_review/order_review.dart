@@ -39,6 +39,7 @@ class _OrderReviewPageState extends State<OrderReviewPage> {
                     Icon(Icons.arrow_drop_down_circle_outlined)
                   ],
                 ),
+
                 SizedBox(
                   height: 170,
                   child: ListView.builder(
