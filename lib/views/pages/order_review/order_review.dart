@@ -129,6 +129,7 @@ class _OrderReviewPageState extends State<OrderReviewPage> {
                 ),
               ],
             ),
+
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
